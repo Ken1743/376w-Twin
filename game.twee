@@ -1,0 +1,1090 @@
+:: StoryTitle
+The Exit Is Still There
+
+:: StoryData
+{
+  "ifid": "5A9C83B2-4D67-4C32-9F12-6D8005B112EA",
+  "format": "Harlowe",
+  "format-version": "3.1.0",
+  "start": "Start"
+}
+
+:: Start
+(set: $trust to 60)(set: $runway to 35)(set: $team to 55)
+<div class="vn-title">
+<div class="title-panel">
+<p class="title-eyebrow">TEAM NAGANO ・ ETHICS SIMULATION</p>
+<h1 class="title-logo"><span lang="en"><span>The Exit</span><span>Is Still There</span></span><span lang="ja"><span>出口は</span><span>そこにある</span></span></h1>
+<p class="title-en"><span lang="en">出口はそこにある</span><span lang="ja">The Exit Is Still There</span></p>
+<p class="title-sub"><span lang="en">“Make the cancel button harder to find.” How would you respond to that request?</span><span lang="ja">解約ボタンを見つけにくくしてほしい——その依頼を、あなたならどう受け止めますか？</span></p>
+<div class="title-start"><div class="vn-btn"><span lang="en">Start</span><span lang="ja">はじめから</span>[[Start->Request]]</div></div>
+<p class="title-help"><span lang="en">Click, Space, or Enter to advance the dialogue. Number keys also pick a choice. Press L to open the dialogue log.</span><span lang="ja">クリック・Space・Enter で会話が進みます。選択肢は数字キーでも選べます。L キーで会話ログを表示します。</span></p>
+<div class="title-cards">
+<section class="title-card">
+<h2><span lang="en">About this story</span><span lang="ja">この物語について</span></h2>
+<p><span lang="en">You are an engineer at LearnLoop, a subscription learning app. To raise retention, your manager asks you to make the cancel button harder to find. Weigh the company’s situation, the impact on users, and your responsibility as an engineer as you choose how to respond.</span><span lang="ja">あなたは、月額制の学習アプリ「LearnLoop」のエンジニアです。継続率を上げるため、解約ボタンを見つけにくくするよう上司から頼まれました。会社の事情、利用者への影響、技術者としての責任を考えながら、あなたの対応を選んでください。</span></p>
+<p class="title-case"><span lang="en">Based on the ACM case study: </span><span lang="ja">題材にしたACMケース：</span><a href="https://ethics.acm.org/code-of-ethics/using-the-code/case-dark-ux-patterns/" target="_blank" rel="noopener"><span lang="en">Dark UX Patterns ↗</span><span lang="ja">Dark UX Patterns（ダークなUXパターン）↗</span></a></p>
+</section>
+<div class="title-side">
+<section class="title-card">
+<h2><span lang="en">Three measures your choices move</span><span lang="ja">判断で動く3つの指標</span></h2>
+<ul class="title-stats"><li class="s-trust"><span lang="en">User trust</span><span lang="ja">利用者の信頼</span></li><li class="s-runway"><span lang="en">Company runway</span><span lang="ja">会社の余力</span></li><li class="s-team"><span lang="en">Team trust</span><span lang="ja">チームの信頼</span></li></ul>
+<p class="title-note"><span lang="en">The numbers are rough in-game guides to help you think about impact.</span><span lang="ja">数値は影響を考えるためのゲーム上の目安です。</span></p>
+</section>
+<section class="title-card title-team">
+<h2>Team Nagano</h2>
+<ul>
+<li><b>Fuka Nagata</b><span lang="en">User &amp; UX perspective (Rina Takahashi’s scenes and the choices that protect users)</span><span lang="ja">利用者・UX視点の担当（高橋 里奈の場面と、利用者を守る選択肢）</span></li>
+<li><b>Sora Watanabe</b><span lang="en">Business &amp; product perspective (Director Saeki’s scenes, company pressures, and metrics)</span><span lang="ja">事業・プロダクト視点の担当（佐伯部長の場面と、会社の事情・指標）</span></li>
+<li><b>Kentaro Yamada</b><span lang="en">Overall structure (scenario, ethical dilemmas, branching design, and Twine build)</span><span lang="ja">全体構成の担当（シナリオ・倫理的葛藤・分岐設計、Twine実装）</span></li>
+</ul>
+</section>
+</div>
+</div>
+</div>
+</div>
+
+:: HUD
+<div class="vn-hud-data" hidden><span data-stat="trust">(print: $trust)</span><span data-stat="runway">(print: $runway)</span><span data-stat="team">(print: $team)</span></div>
+
+:: Request
+(display: "HUD")
+<div class="vn-scene" data-bg="meeting" data-day="DAY 01" data-place="PRODUCT REVIEW" data-title-en="“Could we make canceling a little harder?”" data-title-ja="「解約を、もう少し難しくできないかな」" data-cast="saeki">
+<div class="vn-line"><span lang="en">Monday morning. You’ve been called into the product review meeting room.</span><span lang="ja">月曜の朝。あなたはプロダクトレビューの会議室に呼ばれた。</span></div>
+<div class="vn-line" data-who="saeki"><span lang="en">“Thanks for coming. Have you seen last month’s numbers? Far too many people are canceling.”</span><span lang="ja">「来てくれてありがとう。先月の数字は見たかな。今のままだと、解約が多すぎるんだ。」</span></div>
+<div class="vn-line" data-who="saeki"><span lang="en">“So here’s my request. Move the cancel button deep into the settings, and put the discount plan front and center instead.”</span><span lang="ja">「そこで相談だ。解約ボタンを設定の奥に移して、代わりに割引プランを目立たせてほしい。」</span></div>
+<div class="vn-line" data-who="saeki"><span lang="en">“If revenue drops, we may not be able to keep the free courses running. This is about protecting the team, too.”</span><span lang="ja">「売上が落ちれば、無料講座を続けられなくなるかもしれない。チームを守るためでもあるんだよ。」</span></div>
+<div class="vn-line" data-who="takahashi"><span lang="en">“Hold on. If we do that, people who have already decided to cancel won’t be able to find the way out.”</span><span lang="ja">「待ってください。それでは、解約すると決めた方が出口を見つけられなくなります。」</span></div>
+<div class="vn-line" data-who="saeki"><span lang="en">“I understand users would be inconvenienced. But if the numbers don’t recover, the team suffers too.”</span><span lang="ja">「利用者が困るのは分かる。でも、数字が戻らなければ、困るのはチームも同じなんだ。」</span></div>
+<div class="vn-line"><span lang="en">You are the one who would build this change. The director’s reasons carry real business urgency. Yet the design also looks like it deliberately confuses users who are trying to cancel.</span><span lang="ja">変更を実装する担当はあなただ。部長の説明には事業上の切実さがある。一方で、解約しようとする利用者を意図的に迷わせる設計にも見える。</span></div>
+<div class="vn-line" data-who="you"><span lang="en">(…How should I answer?)</span><span lang="ja">（……どう答えるべきだろう。）</span></div>
+<div class="vn-choices" data-prompt-en="Choose your response" data-prompt-ja="あなたの対応を選ぶ">
+<div class="vn-choice" data-tone="company"><span class="vn-choice-tag"><span lang="en">Prioritize company revenue</span><span lang="ja">会社の売上を優先</span></span><span class="vn-choice-title"><span lang="en">Make the change as requested</span><span lang="ja">依頼どおりに変更する</span></span><span class="vn-choice-desc"><span lang="en">Trust the director’s judgment and build it to protect cash flow and the team’s jobs.</span><span lang="ja">資金繰りとチームの雇用を守るため、部長の判断を信じて実装する。</span></span>(link: "Make the change as requested")[(set: $trust to $trust - 20)(set: $runway to $runway + 18)(set: $team to $team + 4)(go-to: "Implement")]</div>
+<div class="vn-choice" data-tone="user"><span class="vn-choice-tag"><span lang="en">Prioritize users’ right to choose</span><span lang="ja">利用者の選択権を優先</span></span><span class="vn-choice-title"><span lang="en">Refuse the change and protect users’ choice</span><span lang="ja">変更を断り、利用者の選択権を守る</span></span><span class="vn-choice-desc"><span lang="en">Say clearly that you can’t help build something that deliberately blocks cancellation.</span><span lang="ja">解約を意図的に妨げる実装には協力できないと、はっきり伝える。</span></span>(link: "Refuse the change")[(set: $trust to $trust + 12)(set: $runway to $runway - 6)(set: $team to $team - 12)(go-to: "Refuse")]</div>
+<div class="vn-choice" data-tone="balance"><span class="vn-choice-tag"><span lang="en">Look for a way to do both</span><span lang="ja">両立する道を探る</span></span><span class="vn-choice-title"><span lang="en">Keep canceling easy and propose an alternative</span><span lang="ja">解約は分かりやすく保ち、別の案を提案する</span></span><span class="vn-choice-desc"><span lang="en">Leave the cancel button where it is, and clearly offer a pause or a cheaper plan.</span><span lang="ja">解約ボタンはそのままに、休会や低価格プランを分かりやすく案内する。</span></span>(link: "Propose an alternative")[(set: $trust to $trust + 7)(set: $runway to $runway + 3)(set: $team to $team + 4)(go-to: "Alternative")]</div>
+</div>
+</div>
+
+:: Implement
+(display: "HUD")
+<div class="vn-scene" data-bg="office" data-day="DAY 03" data-place="RELEASE UPDATE" data-title-en="Making the change as requested" data-title-ja="依頼どおりに変更する" data-cast="">
+<div class="vn-line"><span lang="en">You moved the cancel link deep into the account settings and made the discount plan stand out.</span><span lang="ja">あなたは解約リンクをアカウント設定の奥へ移し、割引プランを目立たせた。</span></div>
+<div class="vn-line" data-who="notice"><span lang="en">Post-release report: retention has improved.</span><span lang="ja">リリース後レポート：継続率が改善しました。</span></div>
+<div class="vn-line" data-who="saeki"><span lang="en">“The numbers are coming back. You really helped us out. Thank you.”</span><span lang="ja">「数字が戻ってきた。助かったよ、ありがとう。」</span></div>
+<div class="vn-line" data-stage=""><span lang="en">—A few days later.</span><span lang="ja">——数日後。</span></div>
+<div class="vn-line" data-who="takahashi"><span lang="en">“Do you have a minute? We’re getting more and more messages from people who thought they had canceled but were still charged.”</span><span lang="ja">「少しいいですか。解約したつもりなのに請求された、という問い合わせが増えています。」</span></div>
+<div class="vn-line" data-who="takahashi"><span lang="en">“One user, Jordan, couldn’t find how to cancel and ended up hitting the renewal date.”</span><span lang="ja">「Jordanさんという利用者は、解約方法が見つからないまま更新日を迎えてしまったそうです。」</span></div>
+<div class="vn-line" data-who="reflect"><span lang="en">Does a short-term gain in retention justify the burden this screen puts on users?</span><span lang="ja">短期的な継続率の改善は、画面が利用者に与える負担を正当化するだろうか。</span></div>
+<div class="vn-line" data-who="you"><span lang="en">(How should I handle this…?)</span><span lang="ja">（この問題を、どう扱えばいい……？）</span></div>
+<div class="vn-choices" data-prompt-en="How will you handle this?" data-prompt-ja="この問題をどう扱う？">
+<div class="vn-choice" data-tone="user"><span class="vn-choice-tag"><span lang="en">Face the impact on users</span><span lang="ja">利用者への影響を直視する</span></span><span class="vn-choice-title"><span lang="en">Review the support records and propose a fix to Director Saeki</span><span lang="ja">問い合わせの記録を確認し、佐伯部長に修正を提案する</span></span><span class="vn-choice-desc"><span lang="en">Use the trend in support messages as evidence for changing the screen.</span><span lang="ja">問い合わせの傾向を根拠にして、画面の修正を部長に提案する。</span></span>(link: "Propose a fix")[(set: $trust to $trust + 15)(set: $runway to $runway - 4)(set: $team to $team + 8)(go-to: "ImplementRespond")]</div>
+<div class="vn-choice" data-tone="company"><span class="vn-choice-tag"><span lang="en">Prioritize the retention numbers</span><span lang="ja">継続率の数字を優先</span></span><span class="vn-choice-title"><span lang="en">Treat the complaints as isolated cases and keep the change</span><span lang="ja">苦情は一部の例だと考え、変更を維持する</span></span><span class="vn-choice-desc"><span lang="en">Decide the complaints come from only a few users, and keep the current screen.</span><span lang="ja">苦情は一部の利用者の例だと考え、今の画面を維持する。</span></span>(link: "Keep the change")[(set: $trust to $trust - 18)(set: $runway to $runway + 5)(set: $team to $team - 8)(go-to: "ImplementDefend")]</div>
+</div>
+</div>
+
+:: ImplementRespond
+(display: "HUD")
+<div class="vn-scene" data-bg="meeting" data-day="DAY 05" data-place="INCIDENT REVIEW" data-title-en="Proposing a fix, backed by evidence" data-title-ja="根拠を持って、修正を提案する" data-cast="takahashi saeki">
+<div class="vn-line"><span lang="en">You asked Takahashi to summarize the support trends, and drafted a screen that keeps canceling easy while offering an optional pause or discount.</span><span lang="ja">高橋に問い合わせ傾向をまとめてもらい、解約のしやすさと、任意の休会・割引案を両立する画面案を作った。</span></div>
+<div class="vn-line" data-who="takahashi"><span lang="en">“I’ve summarized the support trends. The number of people who got stuck trying to cancel has clearly gone up.”</span><span lang="ja">「問い合わせの傾向をまとめました。解約できずに困った方は、確かに増えています。」</span></div>
+<div class="vn-line" data-who="saeki"><span lang="en">“How many users are actually struggling? And can your proposal keep retention up? That’s what I need to know.”</span><span lang="ja">「実際にどれほどの利用者が困っているのか。君の案で継続率を保てるのか。そこを知りたい。」</span></div>
+<div class="vn-line" data-who="you"><span lang="en">“Let us run a small trial that measures three things together: how many users complete cancellation, how many confused support requests come in, and how often users choose an optional plan change.”</span><span lang="ja">「解約を完了できた割合、誤解による問い合わせ数、任意のプラン変更率。この三つを合わせて測る、小規模な試行をさせてください。」</span></div>
+<div class="vn-line" data-who="saeki"><span lang="en">“…On the condition that it doesn’t block users’ choices. All right. Let’s try it.”</span><span lang="ja">「……利用者の選択を妨げない、という条件付きでだな。分かった。試してみよう。」</span></div>
+<div class="vn-ending" data-id="1">
+<div class="vn-ending-card">
+<p class="vn-ending-label">ENDING 1 ・ <span lang="en">PROVISIONAL</span><span lang="ja">暫定エンディング</span></p>
+<h2><span lang="en">A Step Toward Repair</span><span lang="ja">修正への一歩</span></h2>
+<p><span lang="en">You documented the problems caused by the first implementation and started working to fix them. Whether you can win back trust depends on what you do next.</span><span lang="ja">最初の実装で生じた問題を記録し、改善に動き出しました。信頼を取り戻せるかは、これからの対応にかかっています。</span></p>
+<p class="vn-ending-discuss"><span lang="en">Talk with your team about why you chose this path and what safeguards you would add.</span><span lang="ja">この経路を選んだ理由や、あなたなら加える対策をチームで話し合ってみてください。</span></p>
+<div class="vn-ending-actions"><div class="vn-btn"><span lang="en">Play again from the start</span><span lang="ja">最初からもう一度プレイする</span>[[Play again->Start]]</div></div>
+</div>
+</div>
+</div>
+
+:: ImplementDefend
+(display: "HUD")
+<div class="vn-scene" data-bg="night" data-day="DAY 10" data-place="SUPPORT QUEUE" data-title-en="Keeping the change" data-title-ja="変更を維持する" data-cast="you">
+<div class="vn-line"><span lang="en">You treated the support messages as isolated cases and left the screen as it was.</span><span lang="ja">あなたは問い合わせを個別の例として扱い、画面をそのまま維持した。</span></div>
+<div class="vn-line" data-who="notice"><span lang="en">Support inbox: new messages about canceling have arrived.</span><span lang="ja">サポート受信箱：解約に関する新しい相談が届いています。</span></div>
+<div class="vn-line"><span lang="en">Messages about canceling kept coming, and the support team found themselves repeating the same explanation again and again.</span><span lang="ja">その後も解約に関する相談は続き、サポート担当者は同じ説明を何度も繰り返すようになった。</span></div>
+<div class="vn-line" data-who="you"><span lang="en">(The retention numbers look good. But they don’t show the people who are stuck, unable to cancel.)</span><span lang="ja">（継続率の数字は良い。でも、この数字には「解約できずに困っている人」は映らない。）</span></div>
+<div class="vn-ending" data-id="2">
+<div class="vn-ending-card">
+<p class="vn-ending-label">ENDING 2 ・ <span lang="en">PROVISIONAL</span><span lang="ja">暫定エンディング</span></p>
+<h2><span lang="en">Behind the Numbers</span><span lang="ja">数字の向こう側</span></h2>
+<p><span lang="en">The short-term metric improved, but problems remained with user trust and the burden on support. Choosing what to measure is itself a decision about what you value.</span><span lang="ja">短期の指標は改善しましたが、利用者の信頼とサポートへの負担に問題が残りました。測る指標を選ぶこと自体が、何を大切にするかの判断になります。</span></p>
+<div class="vn-ending-actions"><div class="vn-btn"><span lang="en">Play again from the start</span><span lang="ja">最初からもう一度プレイする</span>[[Play again->Start]]</div></div>
+</div>
+</div>
+</div>
+
+:: Refuse
+(display: "HUD")
+<div class="vn-scene" data-bg="meeting" data-day="DAY 01" data-place="TEAM MEETING" data-title-en="Refusing the change" data-title-ja="変更を断る" data-cast="takahashi saeki">
+<div class="vn-line" data-who="you"><span lang="en">“I’m sorry. I can’t help build something that deliberately makes canceling harder.”</span><span lang="ja">「申し訳ありません。解約を意図的に難しくする実装には、協力できません。」</span></div>
+<div class="vn-line" data-who="takahashi"><span lang="en">“I feel the same way. When users make a decision for themselves, that decision should be respected.”</span><span lang="ja">「私も同じ考えです。利用者が自分で決めたことは、尊重されるべきだと思います。」</span></div>
+<div class="vn-line" data-who="saeki"><span lang="en">“…I hear you both. Then I need you to help me find another way to protect our revenue.”</span><span lang="ja">「……君たちの言い分も分かる。では、収益を守る別の案を一緒に考えてほしい。」</span></div>
+<div class="vn-line"><span lang="en">You’ve made your refusal clear. Now the question is how to explain your reasons and move the team’s discussion forward.</span><span lang="ja">拒否の意思は示せた。次は、どのように根拠を伝え、チームの議論を前へ進めるかが問われる。</span></div>
+<div class="vn-choices" data-prompt-en="What’s your next move?" data-prompt-ja="次の一手は？">
+<div class="vn-choice" data-tone="talk"><span class="vn-choice-tag"><span lang="en">Make your case with evidence</span><span lang="ja">根拠を示して対話する</span></span><span class="vn-choice-title"><span lang="en">Ask Takahashi for help and document the impact on users</span><span lang="ja">高橋に相談し、利用者への影響を資料にまとめる</span></span><span class="vn-choice-desc"><span lang="en">Work with Takahashi to put the impact on users into a report, then discuss it with the director.</span><span lang="ja">高橋と協力し、利用者への影響を資料にまとめて部長と話し合う。</span></span>(link: "Document the impact")[(set: $trust to $trust + 4)(set: $runway to $runway + 3)(set: $team to $team + 13)(go-to: "RefuseEvidence")]</div>
+<div class="vn-choice" data-tone="solo"><span class="vn-choice-tag"><span lang="en">Hold your own line</span><span lang="ja">自分の線引きを守る</span></span><span class="vn-choice-title"><span lang="en">State your decision and stay out of further discussion</span><span lang="ja">自分の判断を伝え、それ以上の議論はしない</span></span><span class="vn-choice-desc"><span lang="en">You’ve already said where you stand. You won’t take part in any more debate.</span><span lang="ja">判断はすでに伝えた。これ以上の議論には加わらない。</span></span>(link: "Stay out of it")[(set: $team to $team - 8)(go-to: "RefuseStand")]</div>
+</div>
+</div>
+
+:: RefuseEvidence
+(display: "HUD")
+<div class="vn-scene" data-bg="office" data-day="DAY 02" data-place="EVIDENCE REVIEW" data-title-en="Showing the impact" data-title-ja="影響を示す" data-cast="takahashi">
+<div class="vn-line" data-who="takahashi"><span lang="en">“I’ve summarized the support trends, with all personal information removed.”</span><span lang="ja">「個人情報を伏せて、問い合わせの傾向をまとめました。」</span></div>
+<div class="vn-line" data-who="takahashi"><span lang="en">“Let’s also run a user test to check whether people can actually find the cancel button.”</span><span lang="ja">「それと、解約ボタンを見つけられるかを確かめるユーザーテストもやりましょう。」</span></div>
+<div class="vn-line" data-stage="takahashi saeki"><span lang="en">At the meeting the next day, Director Saeki stared at the numbers in the report for a long moment.</span><span lang="ja">翌日の会議。佐伯部長は、資料の数字をしばらく見つめていた。</span></div>
+<div class="vn-line" data-who="saeki"><span lang="en">“…Let’s put the decision on hold. We’ll take time to consider other options.”</span><span lang="ja">「……判断は保留にしよう。別案を検討する時間を取る。」</span></div>
+<div class="vn-ending" data-id="3">
+<div class="vn-ending-card">
+<p class="vn-ending-label">ENDING 3 ・ <span lang="en">PROVISIONAL</span><span lang="ja">暫定エンディング</span></p>
+<h2><span lang="en">Opening the Conversation</span><span lang="ja">話し合いを開く</span></h2>
+<p><span lang="en">Backing your refusal with evidence gave the team a chance to rethink its options. The door is now open to bringing users’ voices into the decision.</span><span lang="ja">拒否に根拠を添えたことで、チームで選択肢を見直す機会が生まれました。利用者の声を意思決定に含める道が開かれています。</span></p>
+<div class="vn-ending-actions"><div class="vn-btn"><span lang="en">Play again from the start</span><span lang="ja">最初からもう一度プレイする</span>[[Play again->Start]]</div></div>
+</div>
+</div>
+</div>
+
+:: RefuseStand
+(display: "HUD")
+<div class="vn-scene" data-bg="evening" data-day="DAY 02" data-place="PRIVATE DECISION" data-title-en="Stating your position" data-title-ja="立場を伝える" data-cast="you">
+<div class="vn-line"><span lang="en">You made it clear that you would not build the change.</span><span lang="ja">あなたは、実装しない意思を明確にした。</span></div>
+<div class="vn-line"><span lang="en">But you didn’t share your reasons or the impact on users. Director Saeki can’t see another way forward.</span><span lang="ja">しかし、判断の根拠や利用者への影響は共有しなかった。佐伯部長には、代わりの進め方が見えない。</span></div>
+<div class="vn-line"><span lang="en">The meeting ended without a conclusion.</span><span lang="ja">会議は、結論が出ないまま終わった。</span></div>
+<div class="vn-line" data-who="you"><span lang="en">(Refusing wasn’t wrong. …But did it actually change anything?)</span><span lang="ja">（断ったことは間違っていない。……でも、これで何かが変わったんだろうか。）</span></div>
+<div class="vn-ending" data-id="4">
+<div class="vn-ending-card">
+<p class="vn-ending-label">ENDING 4 ・ <span lang="en">PROVISIONAL</span><span lang="ja">暫定エンディング</span></p>
+<h2><span lang="en">Refusal Is Not the End</span><span lang="ja">拒否だけでは終わらない</span></h2>
+<p><span lang="en">Drawing a line matters. But by explaining your reasons and looking for a workable path, you may be able to change the team’s decision.</span><span lang="ja">境界線を示すことは大切ですが、根拠を伝え、実行可能な道を探ることで、チームの判断を変えられる可能性があります。</span></p>
+<div class="vn-ending-actions"><div class="vn-btn"><span lang="en">Play again from the start</span><span lang="ja">最初からもう一度プレイする</span>[[Play again->Start]]</div></div>
+</div>
+</div>
+</div>
+
+:: Alternative
+(display: "HUD")
+<div class="vn-scene" data-bg="meeting" data-day="DAY 01" data-place="DESIGN REVIEW" data-title-en="Proposing another way" data-title-ja="別の方法を提案する" data-cast="takahashi saeki">
+<div class="vn-line" data-who="you"><span lang="en">“What if we keep the cancel button where it is, and clearly offer a pause or a cheaper plan during the cancellation flow?”</span><span lang="ja">「解約ボタンの場所は変えずに、解約手続きの中で休会や低価格プランを分かりやすく案内するのはどうでしょう。」</span></div>
+<div class="vn-line" data-who="you"><span lang="en">“But there’s one condition: once a user chooses to cancel, they can decline the offer and finish right away.”</span><span lang="ja">「ただし条件があります。利用者が解約を選んだら、引き止めを断ってもすぐに完了できることです。」</span></div>
+<div class="vn-line" data-who="saeki"><span lang="en">“I see. I’d like to know how that would affect retention.”</span><span lang="ja">「なるほど。それで継続率がどう変わるのか、知りたいところだね。」</span></div>
+<div class="vn-line" data-who="takahashi"><span lang="en">“I think we should measure not just retention, but also how easy it is to complete a cancellation and how users react.”</span><span lang="ja">「継続率だけでなく、解約の完了しやすさと利用者の反応も測るべきだと思います。」</span></div>
+<div class="vn-choices" data-prompt-en="How will you move the proposal forward?" data-prompt-ja="提案をどう進める？">
+<div class="vn-choice" data-tone="balance"><span class="vn-choice-tag"><span lang="en">Test it while protecting users’ choice</span><span lang="ja">利用者の選択を守りつつ検証</span></span><span class="vn-choice-title"><span lang="en">Propose a small trial with conditions that protect users’ choice</span><span lang="ja">利用者の選択を守る条件をつけて、小規模な試験を提案する</span></span><span class="vn-choice-desc"><span lang="en">Propose a small test on conditions such as declining the offer never adding extra steps.</span><span lang="ja">断っても手続きが増えないことなどを条件に、小規模な試験を提案する。</span></span>(link: "Propose a small trial")[(set: $trust to $trust + 7)(set: $runway to $runway + 2)(set: $team to $team + 9)(go-to: "AlternativeTest")]</div>
+<div class="vn-choice" data-tone="company"><span class="vn-choice-tag"><span lang="en">Prioritize the company’s targets</span><span lang="ja">会社の目標を優先</span></span><span class="vn-choice-title"><span lang="en">Put the company’s targets first and push the pause option hard</span><span lang="ja">会社の目標を優先し、休会案を強く勧める設計にする</span></span><span class="vn-choice-desc"><span lang="en">To hit the target, design the screen to push users strongly toward pausing.</span><span lang="ja">目標に届かせるため、休会案を強く勧める画面にする。</span></span>(link: "Push the pause option")[(set: $trust to $trust - 14)(set: $runway to $runway + 8)(set: $team to $team - 7)(go-to: "AlternativePressure")]</div>
+</div>
+</div>
+
+:: AlternativeTest
+(display: "HUD")
+<div class="vn-scene" data-bg="office" data-day="DAY 04" data-place="EXPERIMENT DESIGN" data-title-en="Setting conditions and testing" data-title-ja="条件を決めて試す" data-cast="takahashi saeki">
+<div class="vn-line"><span lang="en">The team decided to set clear conditions for the trial.</span><span lang="ja">チームは、試験の条件を決めることにした。</span></div>
+<div class="vn-line" data-who="takahashi"><span lang="en">“The cancel button stays just as easy to find. Declining a pause or a cheaper plan won’t add any steps.”</span><span lang="ja">「解約ボタンの見つけやすさは変えない。休会や低価格プランを断っても、手続きは増やさない。」</span></div>
+<div class="vn-line" data-who="takahashi"><span lang="en">“And users must always be able to complete their cancellation. Those are our three conditions.”</span><span lang="ja">「そして、利用者が確実に解約を完了できること。この三つが条件です。」</span></div>
+<div class="vn-line" data-who="saeki"><span lang="en">“We won’t look at retention alone. Let’s track the cancellation completion rate and support requests, too.”</span><span lang="ja">「見るのは継続率だけじゃない。解約完了率と問い合わせも確認しよう。」</span></div>
+<div class="vn-ending" data-id="5">
+<div class="vn-ending-card">
+<p class="vn-ending-label">ENDING 5 ・ <span lang="en">PROVISIONAL</span><span lang="ja">暫定エンディング</span></p>
+<h2><span lang="en">A Proposal Users Can Choose</span><span lang="ja">選べる提案</span></h2>
+<p><span lang="en">You found a way to offer users real options while still exploring the business case. Deciding how to judge the results is the team’s next challenge.</span><span lang="ja">利用者に選択肢を示しながら、事業上の案も検討する方法を作りました。試験結果をどう評価するかは、チームに残された次の課題です。</span></p>
+<div class="vn-ending-actions"><div class="vn-btn"><span lang="en">Play again from the start</span><span lang="ja">最初からもう一度プレイする</span>[[Play again->Start]]</div></div>
+</div>
+</div>
+</div>
+
+:: AlternativePressure
+(display: "HUD")
+<div class="vn-scene" data-bg="evening" data-day="DAY 04" data-place="EXPERIMENT DESIGN" data-title-en="When a proposal becomes pressure" data-title-ja="提案が圧力に変わる" data-cast="saeki">
+<div class="vn-line"><span lang="en">You made the pause offer prominent and tucked the option to decline out of sight.</span><span lang="ja">休会案を強く勧め、断る操作は目立たない場所に置いた。</span></div>
+<div class="vn-line" data-who="saeki"><span lang="en">“Make the pause offer big and the decline link low-key. That should get us to our target.”</span><span lang="ja">「休会の案内は大きく、断るリンクは控えめに。これなら目標に届くはずだ。」</span></div>
+<div class="vn-line"><span lang="en">It looked like an alternative, but the structure still made it hard for users to choose to cancel.</span><span lang="ja">見た目は別案でも、利用者が解約を選びにくい構造が残った。</span></div>
+<div class="vn-line" data-who="takahashi"><span lang="en">“Adding options doesn’t mean much if declining them is made difficult. That isn’t a free choice.”</span><span lang="ja">「選択肢を増やしても、断りにくくしたら、自由な選択とは言えません。」</span></div>
+<div class="vn-ending" data-id="6">
+<div class="vn-ending-card">
+<p class="vn-ending-label">ENDING 6 ・ <span lang="en">PROVISIONAL</span><span lang="ja">暫定エンディング</span></p>
+<h2><span lang="en">The Limits of an Alternative</span><span lang="ja">代替案の境界線</span></h2>
+<p><span lang="en">Even a well-meant proposal can become a way to steer users if declining is made difficult. What matters is not only whether options exist, but whether the freedom to say no is preserved.</span><span lang="ja">善意の提案も、断りにくく設計すれば利用者を誘導する仕組みになりえます。選択肢の存在だけでなく、断る自由が保たれているかが問われます。</span></p>
+<div class="vn-ending-actions"><div class="vn-btn"><span lang="en">Play again from the start</span><span lang="ja">最初からもう一度プレイする</span>[[Play again->Start]]</div></div>
+</div>
+</div>
+</div>
+
+:: StoryScript [script]
+(function () {
+  "use strict";
+  if (window.vnEngine) { return; }
+  window.vnEngine = true;
+
+  var ENDING_TOTAL = 6;
+  var STORAGE_KEY = "deguchi-endings-v1";
+  var LANG_KEY = "deguchi-lang";
+
+  var CAST = {
+    saeki: { name: { en: "Director Saeki", ja: "佐伯部長" }, role: { en: "Head of Product", ja: "プロダクト責任者" }, img: "assets/m1.png", color: "#475569" },
+    takahashi: { name: { en: "Rina Takahashi", ja: "高橋 里奈" }, role: { en: "UX Designer & User Research", ja: "UXデザイナー・利用者調査" }, img: "assets/w1.png", color: "#3b82c4" },
+    you: { name: { en: "You", ja: "あなた" }, role: { en: "Engineer", ja: "エンジニア" }, img: "assets/m2.png", color: "#2449a8" }
+  };
+  var SPECIAL = {
+    notice: { name: { en: "LearnLoop Alert", ja: "LearnLoop 通知" }, color: "#64748b", icon: "bell" },
+    reflect: { name: { en: "Think About It", ja: "考えてみよう" }, color: "#4f7fd6", icon: "bulb" }
+  };
+  var UI = {
+    next: { en: "Click to continue", ja: "クリックで次へ" },
+    log: { en: "Log", ja: "ログ" },
+    logTitle: { en: "Dialogue Log", ja: "会話ログ" },
+    close: { en: "Close", ja: "閉じる" },
+    empty: { en: "No dialogue yet.", ja: "まだ会話はありません。" },
+    yourChoice: { en: "Your choice: ", ja: "あなたの選択：" },
+    prompt: { en: "What will you do?", ja: "どうする？" },
+    found: { en: "Endings found", ja: "回収したエンディング" },
+    more: { en: " — try a different choice", ja: "　— 別の選択も試してみよう" },
+    all: { en: " — you’ve seen every ending", ja: "　— すべての結末を見ました" }
+  };
+  var TONES = {
+    company: { color: "#c47a1f", icon: "company" },
+    user: { color: "#11867c", icon: "user" },
+    balance: { color: "#5563c4", icon: "balance" },
+    talk: { color: "#2f7fb8", icon: "talk" },
+    solo: { color: "#6c7a83", icon: "solo" }
+  };
+  var STATS = [
+    { key: "trust", label: { en: "User trust", ja: "利用者の信頼" }, color: "#3cc4a6", icon: "trust" },
+    { key: "runway", label: { en: "Company runway", ja: "会社の余力" }, color: "#f0b54a", icon: "runway" },
+    { key: "team", label: { en: "Team trust", ja: "チームの信頼" }, color: "#8ea2ff", icon: "team" }
+  ];
+  var ICONS = {
+    company: '<path d="M3 20h18"/><path d="M5 16l5-5 4 3 6-7"/><path d="M15 7h5v5"/>',
+    user: '<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/>',
+    balance: '<path d="M12 4v16M8 20h8M4 8h16"/><path d="M6 8l-3 6h6zM18 8l-3 6h6z"/>',
+    talk: '<path d="M4 5h16v10H9l-5 4z"/><path d="M8 9h8M8 12h5"/>',
+    solo: '<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>',
+    trust: '<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>',
+    runway: '<circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/>',
+    team: '<circle cx="9" cy="9" r="3"/><circle cx="16.5" cy="10" r="2.5"/><path d="M3 19c0-3 2.7-5 6-5s6 2 6 5M15.5 14.5c2.8 0 5 1.6 5 4.5"/>',
+    bell: '<path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 20a2 2 0 0 0 4 0"/>',
+    bulb: '<path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/>',
+    log: '<path d="M5 6h14M5 12h14M5 18h9"/>'
+  };
+
+  var reduceMotion = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+  var S = { mode: "idle", passage: null, lines: [], i: -1, typing: false, timer: 0, chapterTimer: 0,
+            full: null, talker: null, cast: [], stats: null, log: [], choices: null, ending: null };
+  var lang = "en";
+  try { lang = localStorage.getItem(LANG_KEY) === "ja" ? "ja" : "en"; } catch (e) { /* 既定の英語のまま */ }
+
+  function svg(name) {
+    return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + ICONS[name] + "</svg>";
+  }
+  function el(tag, cls, html) {
+    var node = document.createElement(tag);
+    if (cls) { node.className = cls; }
+    if (html != null) { node.innerHTML = html; }
+    return node;
+  }
+  function esc(text) {
+    return String(text).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; });
+  }
+  // 両言語のテキストを並べ、表示する言語は CSS で切り替える
+  function L(pair) {
+    return '<span lang="en">' + esc(pair.en) + '</span><span lang="ja">' + esc(pair.ja) + "</span>";
+  }
+  function textPair(node) {
+    function pick(code) {
+      var part = node.querySelector('[lang="' + code + '"]');
+      return (part || node).textContent.trim();
+    }
+    return { en: pick("en"), ja: pick("ja") };
+  }
+  function words(text) { return (text || "").split(/\s+/).filter(Boolean); }
+  function clamp(n) { return Math.max(0, Math.min(100, n)); }
+
+  // ---- 常設レイヤー（背景・立ち絵・会話ウィンドウ） ----
+  var body = document.body;
+  var stage = el("div", "vn-stage");
+  var bgs = [el("div", "vn-bg"), el("div", "vn-bg")];
+  var bgIndex = 0;
+  var castEl = el("div", "vn-cast");
+  stage.appendChild(bgs[0]);
+  stage.appendChild(bgs[1]);
+  stage.appendChild(castEl);
+  stage.appendChild(el("div", "vn-shade"));
+
+  var ui = el("div", "vn-ui",
+    '<div class="vn-hud"><div class="vn-scene-tag"><span class="vn-day"></span><span class="vn-place"></span></div>' +
+    '<div class="vn-hud-right"><div class="vn-meters"></div><button type="button" class="vn-log-btn" title="Log (L)">' + svg("log") + "<span>" + L(UI.log) + "</span></button></div></div>" +
+    '<div class="vn-chapter"><div class="vn-chapter-inner"><p class="vn-chapter-day"></p><p class="vn-chapter-title"></p></div></div>' +
+    '<div class="vn-box is-hidden"><div class="vn-face" aria-hidden="true"></div>' +
+    '<div class="vn-plate"><span class="vn-plate-icon"></span><span class="vn-name"></span><small class="vn-role"></small></div>' +
+    '<p class="vn-text" aria-hidden="true"></p><p class="vn-sr" aria-live="polite"></p>' +
+    '<div class="vn-next"><span>' + L(UI.next) + "</span><b>▼</b></div></div>");
+  var meters = ui.querySelector(".vn-meters");
+  STATS.forEach(function (s) {
+    var m = el("div", "vn-meter",
+      '<div class="vn-meter-top"><span class="vn-meter-icon">' + svg(s.icon) + '</span><span class="vn-meter-label">' + L(s.label) +
+      '</span><b class="vn-meter-value">0</b></div><div class="vn-meter-bar"><i></i></div><em class="vn-delta"></em>');
+    m.dataset.stat = s.key;
+    m.style.setProperty("--c", s.color);
+    meters.appendChild(m);
+  });
+  var box = ui.querySelector(".vn-box");
+  var textEl = ui.querySelector(".vn-text");
+  var srEl = ui.querySelector(".vn-sr");
+  var chapter = ui.querySelector(".vn-chapter");
+
+  var logPanel = el("div", "vn-log",
+    '<div class="vn-log-card" role="dialog" aria-label="Dialogue log"><div class="vn-log-head"><h2>' + L(UI.logTitle) + "</h2>" +
+    '<button type="button" class="vn-log-close">' + L(UI.close) + '</button></div><ol class="vn-log-list"></ol></div>');
+  logPanel.hidden = true;
+
+  var langSwitch = el("div", "vn-lang",
+    '<button type="button" data-lang="en">EN</button><button type="button" data-lang="ja">日本語</button>');
+  langSwitch.setAttribute("role", "group");
+  langSwitch.setAttribute("aria-label", "Language / 言語");
+
+  body.insertBefore(stage, body.firstChild);
+  body.appendChild(ui);
+  body.appendChild(logPanel);
+  body.appendChild(langSwitch);
+  Object.keys(CAST).forEach(function (id) { new Image().src = CAST[id].img; });
+
+  // ---- 言語 ----
+  function setLang(next) {
+    lang = next === "ja" ? "ja" : "en";
+    document.documentElement.setAttribute("data-lang", lang);
+    document.documentElement.lang = lang;
+    try { localStorage.setItem(LANG_KEY, lang); } catch (e) { /* 保存できなくても切り替えは続ける */ }
+    Array.prototype.forEach.call(langSwitch.querySelectorAll("button"), function (b) {
+      b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
+    });
+    if (S.full) {
+      if (S.typing) { finishTyping(); } else { textEl.textContent = S.full[lang]; }
+      srEl.textContent = S.full[lang];
+    }
+  }
+  langSwitch.addEventListener("click", function (e) {
+    var b = e.target.closest("button");
+    if (b) { setLang(b.dataset.lang); }
+  });
+  setLang(lang);
+
+  // ---- 背景と立ち絵 ----
+  function setBg(name) {
+    if (bgs[bgIndex].dataset.bg === name) { return; }
+    bgs[bgIndex].classList.remove("is-active");
+    bgIndex = 1 - bgIndex;
+    bgs[bgIndex].dataset.bg = name;
+    bgs[bgIndex].classList.add("is-active");
+  }
+
+  function spriteOf(id) {
+    return castEl.querySelector('.vn-sprite[data-id="' + id + '"]:not(.is-leaving)');
+  }
+
+  function setCast(ids, title) {
+    S.cast = ids.slice();
+    var pos = title ? ["t1", "t2", "t3"] : ids.length === 1 ? ["center"] : ids.length === 2 ? ["left", "right"] : ["l3", "c3", "r3"];
+    Array.prototype.forEach.call(castEl.children, function (sp) {
+      if (ids.indexOf(sp.dataset.id) < 0 && !sp.classList.contains("is-leaving")) {
+        sp.classList.add("is-leaving");
+        sp.classList.remove("is-speaking", "is-talking");
+        setTimeout(function () { if (sp.classList.contains("is-leaving")) { sp.remove(); } }, 650);
+      }
+    });
+    ids.forEach(function (id, n) {
+      var sp = castEl.querySelector('.vn-sprite[data-id="' + id + '"]');
+      if (!sp) {
+        sp = el("div", "vn-sprite is-leaving", '<div class="vn-sprite-motion"><img alt="' + esc(CAST[id].name.en) + '" src="' + CAST[id].img + '"></div>');
+        sp.dataset.id = id;
+        sp.dataset.pos = pos[n];
+        castEl.appendChild(sp);
+        void sp.offsetWidth;
+      }
+      sp.style.setProperty("--delay", title ? (n * 0.18) + "s" : "0s");
+      sp.dataset.pos = pos[n];
+      sp.classList.remove("is-leaving");
+    });
+  }
+
+  function setSpeaker(id) {
+    castEl.classList.toggle("has-speaker", !!id);
+    Array.prototype.forEach.call(castEl.children, function (sp) {
+      sp.classList.toggle("is-speaking", sp.dataset.id === id);
+    });
+  }
+
+  // ---- 指標 ----
+  function readStats(passage) {
+    var data = passage.querySelector(".vn-hud-data");
+    if (!data) { return; }
+    var next = {};
+    STATS.forEach(function (s) {
+      var node = data.querySelector('[data-stat="' + s.key + '"]');
+      next[s.key] = node ? Number(node.textContent) || 0 : 0;
+      var m = meters.querySelector('[data-stat="' + s.key + '"]');
+      m.querySelector(".vn-meter-value").textContent = next[s.key];
+      m.querySelector(".vn-meter-bar i").style.width = clamp(next[s.key]) + "%";
+      var delta = S.stats ? next[s.key] - S.stats[s.key] : 0;
+      var chip = m.querySelector(".vn-delta");
+      chip.className = "vn-delta";
+      if (delta) {
+        chip.textContent = (delta > 0 ? "+" : "") + delta;
+        void chip.offsetWidth;
+        chip.className = "vn-delta is-shown " + (delta > 0 ? "is-up" : "is-down");
+      }
+    });
+    S.stats = next;
+  }
+
+  // ---- 選択肢とエンディングの装飾 ----
+  function decorateChoices(wrap) {
+    if (wrap.dataset.ready) { return; }
+    wrap.dataset.ready = "1";
+    var prompt = { en: wrap.dataset.promptEn || UI.prompt.en, ja: wrap.dataset.promptJa || UI.prompt.ja };
+    wrap.insertBefore(el("div", "vn-choice-prompt", "<span>" + L(prompt) + "</span>"), wrap.firstChild);
+    Array.prototype.forEach.call(wrap.querySelectorAll(".vn-choice"), function (card, n) {
+      var tone = TONES[card.dataset.tone] || TONES.balance;
+      card.style.setProperty("--c", tone.color);
+      card.style.setProperty("--i", n);
+      card.setAttribute("role", "button");
+      card.tabIndex = 0;
+      var content = el("div", "vn-choice-body");
+      Array.prototype.forEach.call(card.querySelectorAll(".vn-choice-tag, .vn-choice-title, .vn-choice-desc"), function (part) {
+        content.appendChild(part);
+      });
+      card.insertBefore(el("span", "vn-choice-arrow", "›"), card.firstChild);
+      card.insertBefore(content, card.firstChild);
+      card.insertBefore(el("span", "vn-choice-icon", svg(tone.icon)), card.firstChild);
+      card.insertBefore(el("span", "vn-choice-key", String(n + 1)), card.firstChild);
+      card.addEventListener("click", function () { choose(card); });
+    });
+  }
+
+  function seenEndings() {
+    try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || []; } catch (e) { return []; }
+  }
+  function recordEnding(id) {
+    var seen = seenEndings();
+    if (seen.indexOf(id) < 0) { seen.push(id); }
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(seen)); } catch (e) { /* 保存できなくても表示は続ける */ }
+    return seen;
+  }
+
+  function fillEnding(wrap) {
+    var card = wrap.querySelector(".vn-ending-card");
+    var actions = card.querySelector(".vn-ending-actions");
+    var stats = card.querySelector(".vn-ending-stats") || card.insertBefore(el("div", "vn-ending-stats"), actions);
+    var coll = card.querySelector(".vn-ending-collection") || card.insertBefore(el("div", "vn-ending-collection"), actions);
+    stats.innerHTML = STATS.map(function (s) {
+      var v = S.stats ? S.stats[s.key] : 0;
+      return '<div class="vn-ending-stat" style="--c:' + s.color + '"><span>' + L(s.label) + '</span><div class="vn-meter-bar"><i style="width:' +
+        clamp(v) + '%"></i></div><b>' + v + "</b></div>";
+    }).join("");
+    var seen = recordEnding(wrap.dataset.id);
+    var dots = "";
+    for (var n = 1; n <= ENDING_TOTAL; n++) {
+      dots += '<i class="' + (seen.indexOf(String(n)) >= 0 ? "is-seen" : "") + (String(n) === wrap.dataset.id ? " is-current" : "") + '"></i>';
+    }
+    var count = " " + Math.min(seen.length, ENDING_TOTAL) + " / " + ENDING_TOTAL;
+    var tail = seen.length < ENDING_TOTAL ? UI.more : UI.all;
+    coll.innerHTML = '<div class="vn-dots">' + dots + "</div><span>" + L({ en: UI.found.en + count + tail.en, ja: UI.found.ja + count + tail.ja }) + "</span>";
+  }
+
+  // ---- 進行 ----
+  function setupPassage(p) {
+    clearTimeout(S.timer);
+    clearTimeout(S.chapterTimer);
+    S.typing = false;
+    S.full = null;
+    stage.classList.remove("is-dim");
+    chapter.classList.remove("is-shown");
+    Array.prototype.forEach.call(p.querySelectorAll(".vn-btn"), function (btn) {
+      btn.tabIndex = 0;
+      btn.setAttribute("role", "button");
+    });
+    var title = p.querySelector(".vn-title");
+    var scene = p.querySelector(".vn-scene");
+    if (title) {
+      S.mode = "title";
+      S.log = [];
+      S.stats = null;
+      body.classList.add("vn-on-title");
+      box.classList.add("is-hidden");
+      setBg("office");
+      castEl.classList.add("is-title");
+      setCast(["takahashi", "saeki", "you"], true);
+      setSpeaker(null);
+      return;
+    }
+    if (!scene) { return; }
+    body.classList.remove("vn-on-title");
+    castEl.classList.remove("is-title");
+    readStats(p);
+    setBg(scene.dataset.bg || "office");
+    setCast(words(scene.dataset.cast));
+    setSpeaker(null);
+    S.lines = Array.prototype.map.call(scene.querySelectorAll(".vn-line"), function (line) {
+      return { who: line.dataset.who || "", text: textPair(line),
+               stage: line.hasAttribute("data-stage") ? words(line.dataset.stage) : null };
+    });
+    S.i = -1;
+    S.choices = scene.querySelector(".vn-choices");
+    S.ending = scene.querySelector(".vn-ending");
+    if (S.choices) { decorateChoices(S.choices); }
+    ui.querySelector(".vn-day").textContent = scene.dataset.day || "";
+    ui.querySelector(".vn-place").textContent = scene.dataset.place || "";
+    chapter.querySelector(".vn-chapter-day").textContent = [scene.dataset.day, scene.dataset.place].filter(Boolean).join(" ・ ");
+    chapter.querySelector(".vn-chapter-title").innerHTML = L({ en: scene.dataset.titleEn || "", ja: scene.dataset.titleJa || "" });
+    S.mode = "chapter";
+    box.classList.add("is-hidden");
+    chapter.classList.add("is-shown");
+    S.chapterTimer = setTimeout(endChapter, reduceMotion ? 1200 : 2100);
+  }
+
+  function endChapter() {
+    if (S.mode !== "chapter") { return; }
+    clearTimeout(S.chapterTimer);
+    chapter.classList.remove("is-shown");
+    box.classList.remove("is-hidden");
+    S.mode = "lines";
+    nextLine();
+  }
+
+  function nextLine() {
+    S.i += 1;
+    if (S.i >= S.lines.length) { finishScene(); return; }
+    var line = S.lines[S.i];
+    if (line.stage) {
+      setCast(line.stage);
+    } else if (CAST[line.who] && line.who !== "you" && S.cast.indexOf(line.who) < 0) {
+      setCast(S.cast.concat(line.who));
+    }
+    var info = CAST[line.who] || SPECIAL[line.who] || null;
+    var onStage = S.cast.indexOf(line.who) >= 0;
+    box.dataset.kind = CAST[line.who] ? "character" : SPECIAL[line.who] ? line.who : "narration";
+    box.style.setProperty("--accent", info ? info.color : "#94a3b8");
+    box.querySelector(".vn-name").innerHTML = info ? L(info.name) : "";
+    box.querySelector(".vn-role").innerHTML = info && info.role ? L(info.role) : "";
+    box.querySelector(".vn-plate-icon").innerHTML = info && info.icon ? svg(info.icon) : "";
+    box.classList.toggle("has-face", line.who === "you" && !onStage);
+    box.classList.remove("is-ready", "is-pop");
+    void box.offsetWidth;
+    box.classList.add("is-pop");
+    setSpeaker(onStage ? line.who : null);
+    S.log.push({ name: info ? info.name : null, color: info ? info.color : "", text: line.text });
+    srEl.textContent = line.text[lang];
+    typeText(line.text, onStage ? spriteOf(line.who) : null);
+  }
+
+  function typeText(pair, sprite) {
+    S.full = pair;
+    S.typing = true;
+    S.talker = sprite;
+    if (sprite) { sprite.classList.add("is-talking"); }
+    if (reduceMotion) { finishTyping(); return; }
+    var n = 0;
+    (function tick() {
+      var text = S.full[lang];
+      n += 1;
+      textEl.textContent = text.slice(0, n);
+      if (n >= text.length) { finishTyping(); return; }
+      var pause = "、。！？…」）.,!?".indexOf(text.charAt(n - 1)) >= 0;
+      S.timer = setTimeout(tick, pause ? 150 : lang === "en" ? 16 : 32);
+    })();
+  }
+
+  function finishTyping() {
+    clearTimeout(S.timer);
+    textEl.textContent = S.full[lang];
+    S.typing = false;
+    if (S.talker) { S.talker.classList.remove("is-talking"); }
+    box.classList.add("is-ready");
+  }
+
+  function finishScene() {
+    if (S.choices) {
+      S.mode = "choice";
+      stage.classList.add("is-dim");
+      box.classList.remove("is-ready");
+      S.choices.classList.add("is-open");
+      var first = S.choices.querySelector(".vn-choice");
+      if (first) { first.focus({ preventScroll: true }); }
+    } else if (S.ending) {
+      S.mode = "ending";
+      stage.classList.add("is-dim");
+      box.classList.add("is-hidden");
+      fillEnding(S.ending);
+      S.ending.classList.add("is-open");
+      var again = S.ending.querySelector(".vn-btn");
+      if (again) { again.focus({ preventScroll: true }); }
+    } else {
+      S.mode = "done";
+    }
+  }
+
+  function choose(card) {
+    if (S.mode !== "choice") { return; }
+    S.mode = "leaving";
+    card.classList.add("is-chosen");
+    var title = card.querySelector(".vn-choice-title");
+    S.log.push({ choice: true, text: title ? textPair(title) : { en: "", ja: "" } });
+    var link = card.querySelector("tw-link");
+    setTimeout(function () { if (link) { link.click(); } }, reduceMotion ? 0 : 280);
+  }
+
+  function advance() {
+    if (!logPanel.hidden) { return; }
+    if (S.mode === "chapter") { endChapter(); return; }
+    if (S.mode !== "lines") { return; }
+    if (S.typing) { finishTyping(); } else { nextLine(); }
+  }
+
+  // ---- 会話ログ ----
+  function openLog() {
+    logPanel.querySelector(".vn-log-list").innerHTML = S.log.map(function (item) {
+      if (item.choice) {
+        return '<li class="is-choice">▶ ' + L({ en: UI.yourChoice.en + item.text.en, ja: UI.yourChoice.ja + item.text.ja }) + "</li>";
+      }
+      return "<li>" + (item.name ? '<b style="color:' + item.color + '">' + L(item.name) + "</b>" : "") + "<p>" + L(item.text) + "</p></li>";
+    }).join("") || '<li class="is-empty">' + L(UI.empty) + "</li>";
+    logPanel.hidden = false;
+    var list = logPanel.querySelector(".vn-log-list");
+    list.scrollTop = list.scrollHeight;
+    logPanel.querySelector(".vn-log-close").focus();
+  }
+  function closeLog() { logPanel.hidden = true; }
+
+  ui.querySelector(".vn-log-btn").addEventListener("click", function (e) { e.stopPropagation(); openLog(); });
+  logPanel.addEventListener("click", function (e) {
+    if (e.target === logPanel || e.target.closest(".vn-log-close")) { closeLog(); }
+  });
+
+  document.addEventListener("click", function (e) {
+    var t = e.target;
+    if (!t.closest) { return; }
+    var btn = t.closest(".vn-btn");
+    if (btn) {
+      // ボタンの中にある Harlowe のリンクを代わりに押す（リンク自体のクリックは Harlowe に任せる）
+      var link = btn.querySelector("tw-link");
+      if (link && !t.closest("tw-link")) { link.click(); }
+      return;
+    }
+    if (t.closest("a, button, tw-link, .vn-choice, .vn-ending-card, .vn-title, .vn-log, .vn-lang")) { return; }
+    advance();
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.altKey || e.ctrlKey || e.metaKey) { return; }
+    var key = e.key;
+    var active = document.activeElement;
+    if (!logPanel.hidden) {
+      if (key === "Escape" || key === "l" || key === "L") { closeLog(); e.preventDefault(); }
+      return;
+    }
+    if (S.mode === "choice") {
+      var cards = Array.prototype.slice.call(S.choices.querySelectorAll(".vn-choice"));
+      var at = cards.indexOf(active);
+      if (/^[1-9]$/.test(key) && cards[Number(key) - 1]) { choose(cards[Number(key) - 1]); e.preventDefault(); }
+      else if ((key === "Enter" || key === " ") && at >= 0) { choose(active); e.preventDefault(); }
+      else if (key === "ArrowDown" || key === "ArrowUp") {
+        var to = cards[(at + (key === "ArrowDown" ? 1 : cards.length - 1)) % cards.length] || cards[0];
+        to.focus();
+        e.preventDefault();
+      }
+      return;
+    }
+    if ((key === "Enter" || key === " ") && active && active.classList && active.classList.contains("vn-btn")) {
+      active.click();
+      e.preventDefault();
+      return;
+    }
+    if ((key === "l" || key === "L") && S.mode !== "title") { openLog(); return; }
+    if (key === " " || key === "Enter" || key === "ArrowRight") {
+      if (S.mode === "chapter" || S.mode === "lines") { advance(); e.preventDefault(); }
+    }
+  });
+
+  // ---- Harlowe のパッセージ切り替えを監視 ----
+  var story = document.querySelector("tw-story");
+  function scan() {
+    var passages = story.querySelectorAll("tw-passage");
+    for (var n = passages.length - 1; n >= 0; n--) {
+      if (!passages[n].vnSeen) {
+        passages[n].vnSeen = true;
+        S.passage = passages[n];
+        setupPassage(passages[n]);
+        return;
+      }
+    }
+  }
+  new MutationObserver(function () { requestAnimationFrame(scan); }).observe(story, { childList: true });
+  requestAnimationFrame(scan);
+})();
+
+:: StoryStylesheet [stylesheet]
+@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap");
+
+:root {
+  --ink: #1e293b;
+  --muted: #64748b;
+  --blue: #2f63d6;
+  --paper: #f8fafc;
+  --font: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+  --box-h: clamp(150px, 25vh, 215px);
+}
+
+html, body { background: #0f172a; height: 100%; margin: 0; overflow: hidden; }
+body { color: var(--ink); font-family: var(--font); }
+
+/* Harlowe 標準レイアウトを打ち消し、全画面の舞台にする */
+tw-story {
+  background: transparent; box-sizing: border-box; color: var(--ink); display: block; font-family: var(--font); font-size: 16px;
+  height: 100%; inset: 0; line-height: 1.6; margin: 0; max-width: none; padding: 0; pointer-events: none;
+  position: fixed; width: 100%; z-index: 3;
+}
+tw-passage { inset: 0; pointer-events: none; position: absolute; }
+tw-sidebar { display: none !important; }
+tw-passage br { display: none; }
+.vn-line, .vn-hud-data { display: none !important; }
+a { color: var(--blue); }
+
+/* 言語切り替え：選択中でない言語のテキストを隠す */
+html[data-lang="en"] [lang="ja"], html[data-lang="ja"] [lang="en"] { display: none !important; }
+.vn-lang {
+  backdrop-filter: blur(6px); background: rgba(15, 23, 42, .74); border: 1px solid rgba(255, 255, 255, .12); border-radius: 12px;
+  display: flex; gap: 2px; padding: 3px; position: fixed; right: 16px; top: 14px; z-index: 6;
+}
+.vn-lang button {
+  background: transparent; border: 0; border-radius: 9px; color: #cbd5e1; cursor: pointer; font: 700 .76rem var(--font);
+  letter-spacing: .04em; padding: 6px 11px;
+}
+.vn-lang button[aria-pressed="true"] { background: #fff; color: var(--blue); }
+.vn-lang button:focus-visible { outline: 2px solid #9dbcff; }
+
+/* ---------- 背景と立ち絵 ---------- */
+.vn-stage { inset: 0; overflow: hidden; position: fixed; z-index: 0; }
+.vn-bg {
+  background-position: center; background-size: cover; filter: blur(2.5px) saturate(1.05); inset: -24px;
+  opacity: 0; position: absolute; transform: scale(1.02); transition: opacity 1s ease, transform 14s ease-out;
+}
+.vn-bg.is-active { opacity: 1; transform: scale(1.07); }
+.vn-bg[data-bg="office"] { background-image: url("assets/bg/office.svg"); }
+.vn-bg[data-bg="meeting"] { background-image: url("assets/bg/meeting.svg"); }
+.vn-bg[data-bg="night"] { background-image: url("assets/bg/night.svg"); }
+.vn-bg[data-bg="evening"] { background-image: url("assets/bg/evening.svg"); }
+.vn-shade {
+  background: linear-gradient(to bottom, rgba(15, 23, 42, .28), transparent 20%, transparent 58%, rgba(15, 23, 42, .42));
+  inset: 0; position: absolute; transition: background-color .4s;
+}
+.vn-stage.is-dim .vn-shade { background-color: rgba(15, 23, 42, .38); }
+
+.vn-cast { inset: 0; position: absolute; }
+.vn-sprite {
+  bottom: 0; height: 100%; left: 50%; position: absolute; top: 0; width: 0;
+  transition: left .65s cubic-bezier(.2, .8, .2, 1), opacity .5s ease var(--delay, 0s), transform .55s cubic-bezier(.2, .8, .2, 1) var(--delay, 0s), filter .35s ease;
+}
+.vn-sprite.is-leaving { opacity: 0; transform: translateY(36px); }
+.vn-sprite[data-pos="center"] { left: 50%; }
+.vn-sprite[data-pos="left"] { left: 29%; }
+.vn-sprite[data-pos="right"] { left: 71%; }
+.vn-sprite[data-pos="l3"] { left: 20%; }
+.vn-sprite[data-pos="c3"] { left: 50%; }
+.vn-sprite[data-pos="r3"] { left: 80%; }
+.vn-sprite[data-pos="t1"] { left: 62%; }
+.vn-sprite[data-pos="t2"] { left: 77%; }
+.vn-sprite[data-pos="t3"] { left: 91%; }
+.vn-sprite-motion { aspect-ratio: 2 / 3; height: 168vh; left: 0; position: absolute; top: 4vh; translate: -50% 0; }
+.vn-sprite img {
+  animation: vn-breathe 4.6s ease-in-out infinite; display: block; filter: drop-shadow(0 14px 32px rgba(15, 23, 42, .3));
+  height: 100%; transform-origin: 50% 100%; width: 100%;
+}
+.vn-cast.has-speaker .vn-sprite:not(.is-speaking) { filter: brightness(.6) saturate(.75); }
+.vn-sprite.is-speaking { z-index: 2; }
+.vn-sprite.is-talking .vn-sprite-motion { animation: vn-talk .34s ease-in-out infinite alternate; }
+.vn-cast.is-title .vn-sprite-motion { height: 140vh; top: 9vh; }
+
+/* ---------- HUD ---------- */
+.vn-ui { inset: 0; pointer-events: none; position: fixed; z-index: 2; }
+.vn-hud {
+  align-items: flex-start; display: flex; gap: 12px; justify-content: space-between; left: 16px; position: absolute;
+  right: 150px; top: 14px; transition: opacity .4s;
+}
+.vn-on-title .vn-hud, .vn-on-title .vn-box { opacity: 0; visibility: hidden; }
+.vn-scene-tag {
+  align-items: center; background: rgba(255, 255, 255, .86); border-radius: 999px; box-shadow: 0 6px 20px rgba(15, 23, 42, .18);
+  color: var(--ink); display: flex; font-size: .74rem; font-weight: 700; gap: 10px; letter-spacing: .1em; padding: 5px 14px 5px 5px;
+}
+.vn-day { background: var(--blue); border-radius: 999px; color: #fff; padding: 3px 11px; }
+.vn-hud-right { align-items: flex-start; display: flex; gap: 8px; }
+.vn-meters {
+  backdrop-filter: blur(6px); background: rgba(15, 23, 42, .74); border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 14px; display: flex; gap: 14px; padding: 8px 12px;
+}
+.vn-meter { color: #e2e8f0; font-size: .7rem; position: relative; width: 132px; }
+.vn-meter-top { align-items: center; display: flex; gap: 5px; }
+.vn-meter-icon { color: var(--c); display: inline-flex; height: 15px; width: 15px; }
+.vn-meter-icon svg { height: 100%; width: 100%; }
+.vn-meter-label { flex: 1; white-space: nowrap; }
+.vn-meter-value { color: #fff; font-size: .92rem; font-variant-numeric: tabular-nums; }
+.vn-meter-bar { background: rgba(255, 255, 255, .16); border-radius: 99px; height: 6px; margin-top: 5px; overflow: hidden; }
+.vn-meter-bar i { background: var(--c); border-radius: inherit; display: block; height: 100%; transition: width 1s cubic-bezier(.2, .8, .2, 1) .3s; width: 0; }
+.vn-delta {
+  border-radius: 99px; color: #fff; font-size: .78rem; font-style: normal; font-weight: 900; opacity: 0; padding: 1px 8px;
+  pointer-events: none; position: absolute; right: -6px; top: 30px;
+}
+.vn-delta.is-up { background: #23a866; }
+.vn-delta.is-down { background: #d9534f; }
+.vn-delta.is-shown { animation: vn-delta 3.4s ease .5s both; }
+.vn-log-btn {
+  align-items: center; backdrop-filter: blur(6px); background: rgba(15, 23, 42, .74); border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 12px; color: #e2e8f0; cursor: pointer; display: flex; font: 700 .76rem var(--font); gap: 6px; padding: 9px 12px; pointer-events: auto;
+}
+.vn-log-btn svg { height: 16px; width: 16px; }
+.vn-log-btn:hover, .vn-log-btn:focus-visible { background: rgba(15, 23, 42, .92); outline: 2px solid #9dbcff; }
+
+/* ---------- 章タイトル ---------- */
+.vn-chapter { display: grid; inset: 0; opacity: 0; place-items: center; position: absolute; transition: opacity .5s ease; }
+.vn-chapter.is-shown { opacity: 1; }
+.vn-chapter-inner {
+  background: linear-gradient(90deg, transparent, rgba(15, 23, 42, .8) 18%, rgba(15, 23, 42, .8) 82%, transparent);
+  color: #fff; padding: 22px 16px 26px; text-align: center; width: 100%;
+}
+.vn-chapter-day { color: #a8c4ff; font-size: .8rem; font-weight: 700; letter-spacing: .3em; margin: 0 0 6px; }
+.vn-chapter-title { font-size: clamp(1.35rem, 3.4vw, 2.3rem); font-weight: 900; letter-spacing: .06em; margin: 0; }
+.vn-chapter.is-shown .vn-chapter-title { animation: vn-rise .7s cubic-bezier(.2, .8, .2, 1) both; }
+
+/* ---------- 会話ウィンドウ ---------- */
+.vn-box {
+  --accent: #94a3b8;
+  backdrop-filter: blur(10px); background: linear-gradient(180deg, rgba(255, 255, 255, .95), rgba(243, 246, 250, .92));
+  border: 2px solid rgba(255, 255, 255, .95); border-radius: 22px; bottom: max(16px, 3vh); box-sizing: border-box;
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 38%, transparent), 0 22px 50px rgba(15, 23, 42, .38);
+  left: 50%; min-height: var(--box-h); padding: 34px 44px 30px; position: absolute; transform: translateX(-50%);
+  transition: opacity .35s ease, transform .35s ease, box-shadow .3s ease; width: min(1080px, calc(100% - 32px));
+}
+.vn-box.is-hidden { opacity: 0; transform: translate(-50%, 16px); }
+.vn-box.is-pop { animation: vn-pop .28s ease-out; }
+.vn-plate {
+  align-items: center; background: var(--accent); border-radius: 999px; box-shadow: 0 6px 16px rgba(15, 23, 42, .25);
+  color: #fff; display: flex; font-size: 1.04rem; font-weight: 700; gap: 7px; left: 26px; letter-spacing: .06em;
+  padding: 6px 20px 6px 18px; position: absolute; top: -21px; transition: background .3s;
+}
+.vn-plate small { font-size: .7rem; font-weight: 500; letter-spacing: .02em; opacity: .9; }
+.vn-plate-icon { display: inline-flex; }
+.vn-plate-icon:empty { display: none; }
+.vn-plate-icon svg { height: 17px; width: 17px; }
+.vn-box[data-kind="narration"] .vn-plate { display: none; }
+.vn-box[data-kind="narration"] .vn-text { color: #334155; }
+.vn-box[data-kind="reflect"] { background: linear-gradient(180deg, rgba(241, 246, 255, .97), rgba(229, 238, 252, .94)); }
+.vn-box[data-kind="notice"] .vn-text { color: #334155; font-weight: 700; }
+.vn-text { font-size: clamp(1rem, 1.55vw, 1.2rem); letter-spacing: .03em; line-height: 1.9; margin: 0; min-height: 3.8em; }
+.vn-sr { clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; position: absolute; width: 1px; }
+.vn-face {
+  background: url("assets/m2.png") 51% 4% / 470% auto no-repeat, linear-gradient(160deg, #e3e9f8, #c9d4ee);
+  border: 3px solid #fff; border-radius: 18px; bottom: 24px; box-shadow: 0 6px 18px rgba(15, 23, 42, .25);
+  display: none; height: 108px; left: 26px; position: absolute; width: 108px;
+}
+.vn-box.has-face { padding-left: 156px; }
+.vn-box.has-face .vn-face { display: block; }
+.vn-box.has-face .vn-plate { left: 150px; }
+.vn-next {
+  align-items: center; bottom: 12px; color: var(--accent); display: flex; font-size: .7rem; font-weight: 700; gap: 6px;
+  opacity: 0; position: absolute; right: 24px; transition: opacity .2s;
+}
+.vn-next span { color: var(--muted); letter-spacing: .08em; }
+.vn-next b { animation: vn-bounce 1s ease-in-out infinite; font-size: .9rem; }
+.vn-box.is-ready .vn-next { opacity: 1; }
+
+/* ---------- 選択肢 ---------- */
+.vn-choices {
+  align-items: center; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px; inset: 0; justify-content: center;
+  opacity: 0; padding: 74px 16px calc(var(--box-h) + 44px); pointer-events: none; position: fixed; transition: opacity .35s ease, visibility .35s;
+  visibility: hidden;
+}
+.vn-choices.is-open { opacity: 1; visibility: visible; }
+.vn-choices.is-open .vn-choice { pointer-events: auto; }
+.vn-choice-prompt > span {
+  background: rgba(15, 23, 42, .8); border-radius: 999px; color: #fff; display: inline-block; font-size: .86rem; font-weight: 700;
+  letter-spacing: .12em; padding: 6px 20px;
+}
+.vn-choice-prompt > span::before { color: #93b4ff; content: "◆ "; }
+.vn-choice {
+  align-items: center; background: rgba(255, 255, 255, .95); border: 2px solid transparent; border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, .3); box-sizing: border-box; cursor: pointer; display: grid; gap: 14px;
+  grid-template-columns: auto auto minmax(0, 1fr) auto; overflow: hidden; padding: 12px 18px 12px 16px; position: relative;
+  transition: transform .22s ease, box-shadow .22s ease, border-color .2s ease, background .2s ease; width: min(780px, 100%);
+}
+.vn-choice::before { background: var(--c); bottom: 0; content: ""; left: 0; position: absolute; top: 0; width: 6px; }
+.vn-choices.is-open .vn-choice { animation: vn-choice-in .5s cubic-bezier(.2, .8, .2, 1) both; animation-delay: calc(var(--i) * 90ms + 80ms); }
+.vn-choice:hover, .vn-choice:focus-visible {
+  background: #fff; border-color: var(--c); box-shadow: 0 14px 34px color-mix(in srgb, var(--c) 45%, transparent);
+  outline: none; transform: translateX(6px) scale(1.01);
+}
+.vn-choice.is-chosen { background: color-mix(in srgb, var(--c) 14%, #fff); border-color: var(--c); transform: scale(1.03); }
+.vn-choices:has(.is-chosen) .vn-choice:not(.is-chosen) { opacity: .35; transform: scale(.97); }
+.vn-choice-key {
+  align-items: center; background: #eef2f7; border-radius: 9px; color: var(--muted); display: flex; font-size: .82rem;
+  font-weight: 700; height: 28px; justify-content: center; width: 28px;
+}
+.vn-choice-icon {
+  align-items: center; background: var(--c); border-radius: 50%; box-shadow: 0 6px 14px color-mix(in srgb, var(--c) 45%, transparent);
+  color: #fff; display: flex; height: 46px; justify-content: center; width: 46px;
+}
+.vn-choice-icon svg { height: 25px; width: 25px; }
+.vn-choice-body { display: flex; flex-direction: column; min-width: 0; }
+.vn-choice-tag {
+  align-self: flex-start; background: color-mix(in srgb, var(--c) 13%, #fff); border-radius: 99px; color: var(--c);
+  font-size: .7rem; font-weight: 700; letter-spacing: .06em; margin-bottom: 3px; padding: 1px 10px;
+}
+.vn-choice tw-link, .vn-choice tw-hook, .vn-choice tw-expression, .vn-btn tw-link, .vn-btn tw-hook, .vn-btn tw-expression { display: none; }
+.vn-choice-title {
+  color: var(--ink); font-size: clamp(.98rem, 1.45vw, 1.12rem); font-weight: 700; line-height: 1.45; pointer-events: none; text-decoration: none;
+}
+.vn-choice-desc { color: var(--muted); font-size: .82rem; line-height: 1.5; margin-top: 2px; }
+.vn-choice-arrow { color: var(--c); font-size: 1.8rem; font-weight: 700; opacity: .35; transition: opacity .2s, transform .2s; }
+.vn-choice:hover .vn-choice-arrow, .vn-choice:focus-visible .vn-choice-arrow { opacity: 1; transform: translateX(4px); }
+
+/* ---------- エンディング ---------- */
+.vn-ending {
+  backdrop-filter: blur(3px); background: rgba(15, 23, 42, .5); box-sizing: border-box; display: grid; inset: 0; opacity: 0;
+  padding: 16px; place-items: center; pointer-events: none; position: fixed; transition: opacity .6s ease, visibility .6s; visibility: hidden;
+}
+.vn-ending.is-open { opacity: 1; pointer-events: auto; visibility: visible; }
+.vn-ending-card {
+  background: var(--paper); border-radius: 26px; box-shadow: 0 30px 80px rgba(0, 0, 0, .45); box-sizing: border-box;
+  max-height: calc(100vh - 32px); overflow: auto; padding: 32px clamp(20px, 4vw, 44px) 28px; text-align: center; width: min(700px, 100%);
+}
+.vn-ending.is-open .vn-ending-card { animation: vn-rise .8s cubic-bezier(.2, .8, .2, 1) .1s both; }
+.vn-ending-label { color: var(--blue); font-size: .74rem; font-weight: 700; letter-spacing: .24em; margin: 0; }
+.vn-ending-card h2 { font-size: clamp(1.6rem, 3.6vw, 2.3rem); font-weight: 900; letter-spacing: .06em; margin: 6px 0 12px; }
+.vn-ending-card p { line-height: 1.85; margin: 8px 0; }
+.vn-ending-discuss { color: var(--muted); font-size: .9rem; }
+.vn-ending-stats { background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; display: grid; gap: 8px; margin: 18px 0 12px; padding: 14px 18px; text-align: left; }
+.vn-ending-stat { align-items: center; display: grid; font-size: .84rem; gap: 12px; grid-template-columns: 7.5em 1fr 2.5em; }
+.vn-ending-stat .vn-meter-bar { background: #e9edf3; height: 8px; margin: 0; }
+.vn-ending-stat b { font-variant-numeric: tabular-nums; text-align: right; }
+.vn-ending-collection { align-items: center; color: var(--muted); display: flex; flex-direction: column; font-size: .8rem; gap: 6px; margin: 4px 0 16px; }
+.vn-dots { display: flex; gap: 6px; }
+.vn-dots i { background: #dbe2ec; border-radius: 50%; display: block; height: 12px; width: 12px; }
+.vn-dots i.is-seen { background: var(--blue); }
+.vn-dots i.is-current { box-shadow: 0 0 0 3px rgba(47, 99, 214, .3); }
+
+/* ボタン型リンク（はじめから・もう一度） */
+.vn-btn {
+  background: linear-gradient(120deg, #2f63d6, #1e4fb5); border-radius: 999px; box-shadow: 0 10px 24px rgba(47, 99, 214, .38);
+  color: #fff; cursor: pointer; display: inline-block; font-size: 1.05rem; font-weight: 700; letter-spacing: .12em; padding: 13px 40px;
+  text-decoration: none; transition: transform .2s ease, box-shadow .2s ease;
+}
+.vn-btn:hover, .vn-btn:focus-visible {
+  box-shadow: 0 14px 30px rgba(47, 99, 214, .5); outline: none; transform: translateY(-2px);
+}
+.vn-btn::after { content: "  ▶"; font-size: .8em; }
+
+/* ---------- タイトル画面 ---------- */
+.vn-title {
+  background: linear-gradient(90deg, rgba(248, 250, 252, .96) 0, rgba(248, 250, 252, .9) 38%, rgba(248, 250, 252, 0) 62%);
+  box-sizing: border-box; inset: 0; overflow: auto; padding: clamp(16px, 4vh, 44px) clamp(16px, 4vw, 60px); pointer-events: auto; position: fixed;
+}
+.title-panel { animation: vn-rise .9s cubic-bezier(.2, .8, .2, 1) both; max-width: 640px; }
+.title-eyebrow { color: var(--blue); font-size: .74rem; font-weight: 700; letter-spacing: .24em; margin: 0; }
+.title-logo { color: var(--ink); font-size: clamp(2.4rem, 6vw, 4.2rem); font-weight: 900; letter-spacing: .06em; line-height: 1.08; margin: 8px 0 4px; }
+.title-logo span span { display: block; }
+.title-logo span span + span { color: var(--blue); padding-left: 1em; }
+.title-en { color: var(--muted); font-size: .9rem; letter-spacing: .08em; margin: 0; }
+.title-sub { font-size: clamp(.95rem, 1.5vw, 1.08rem); line-height: 1.7; margin: 12px 0 16px; }
+.title-help { color: var(--muted); font-size: .78rem; margin: 10px 0 16px; }
+.title-cards { display: grid; gap: 12px; grid-template-columns: 1.15fr 1fr; }
+.title-side { display: grid; gap: 12px; }
+.title-card {
+  background: rgba(255, 255, 255, .88); border: 1px solid #e2e8f0; border-radius: 16px; box-shadow: 0 8px 22px rgba(30, 41, 59, .08);
+  font-size: .84rem; line-height: 1.7; padding: 12px 16px;
+}
+.title-card h2 { color: var(--blue); font-size: .86rem; letter-spacing: .08em; margin: 0 0 4px; }
+.title-card p { margin: 4px 0; }
+.title-case { border-top: 1px dashed #cfd8e3; margin-top: 8px !important; padding-top: 8px; }
+.title-case a { font-weight: 700; white-space: nowrap; }
+.title-stats { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 4px 0; padding: 0; }
+.title-stats li { border-radius: 99px; color: #fff; font-size: .74rem; font-weight: 700; padding: 2px 10px; }
+.title-stats .s-trust { background: #22a487; }
+.title-stats .s-runway { background: #d39a2b; }
+.title-stats .s-team { background: #6b7fe0; }
+.title-note { color: var(--muted); font-size: .72rem; }
+.title-team ul { list-style: none; margin: 0; padding: 0; }
+.title-team li::before { color: var(--blue); content: "● "; font-size: .7em; }
+.title-team li { margin-top: 4px; }
+.title-team li b { font-size: .86rem; }
+.title-team li span[lang] { color: var(--muted); display: block; font-size: .74rem; line-height: 1.5; padding-left: 1.1em; }
+
+/* ---------- 会話ログ ---------- */
+.vn-log { background: rgba(15, 23, 42, .62); display: grid; inset: 0; padding: 16px; place-items: center; position: fixed; z-index: 10; }
+.vn-log[hidden] { display: none; }
+.vn-log-card {
+  background: var(--paper); border-radius: 20px; box-shadow: 0 30px 80px rgba(0, 0, 0, .45); box-sizing: border-box; display: flex;
+  flex-direction: column; font-family: var(--font); max-height: min(80vh, 720px); padding: 18px 22px; width: min(760px, 100%);
+}
+.vn-log-head { align-items: center; display: flex; justify-content: space-between; margin-bottom: 8px; }
+.vn-log-head h2 { font-size: 1.05rem; margin: 0; }
+.vn-log-close { background: var(--ink); border: 0; border-radius: 99px; color: #fff; cursor: pointer; font: 700 .8rem var(--font); padding: 7px 16px; }
+.vn-log-list { list-style: none; margin: 0; overflow: auto; padding: 0; }
+.vn-log-list li { border-bottom: 1px solid #e5e9f0; display: grid; gap: 2px; line-height: 1.7; padding: 9px 2px; }
+.vn-log-list li b { font-size: .8rem; }
+.vn-log-list li p { margin: 0; }
+.vn-log-list li.is-choice { color: var(--blue); font-weight: 700; }
+.vn-log-list li.is-empty { color: var(--muted); }
+
+/* ---------- アニメーション ---------- */
+@keyframes vn-breathe { 0%, 100% { transform: scale(1, 1); } 50% { transform: scale(1.004, 1.009); } }
+@keyframes vn-talk { from { transform: translateY(0); } to { transform: translateY(-5px); } }
+@keyframes vn-pop { from { transform: translate(-50%, 5px); } to { transform: translate(-50%, 0); } }
+@keyframes vn-bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(3px); } }
+@keyframes vn-rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes vn-choice-in { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+@keyframes vn-delta { 0% { opacity: 0; transform: translateY(-6px); } 12%, 75% { opacity: 1; transform: none; } 100% { opacity: 0; transform: translateY(4px); } }
+
+/* ---------- レスポンシブ ---------- */
+@media (max-width: 860px) {
+  .vn-meter { width: 92px; }
+  .vn-meter-label { font-size: .6rem; }
+  .vn-place { display: none; }
+  .vn-scene-tag { padding-right: 5px; }
+  .title-cards { grid-template-columns: 1fr; }
+  .vn-title { background: linear-gradient(180deg, rgba(248, 250, 252, .94), rgba(248, 250, 252, .86)); }
+}
+@media (max-width: 600px) {
+  .vn-title { padding-top: 64px; }
+  :root { --box-h: 150px; }
+  .vn-hud { flex-direction: column; left: 16px; right: 16px; }
+  .vn-hud-right { width: 100%; }
+  .vn-meters { flex: 1; gap: 8px; justify-content: space-between; padding: 6px 8px; }
+  .vn-meter { flex: 1; width: auto; }
+  .vn-meter-label { display: none; }
+  .vn-log-btn span { display: none; }
+  .vn-sprite-motion { height: 112vh; top: 12vh; }
+  .vn-sprite[data-pos="left"] { left: 24%; }
+  .vn-sprite[data-pos="right"] { left: 76%; }
+  .vn-cast.is-title { opacity: .22; }
+  .vn-box { padding: 30px 20px 30px; }
+  .vn-box.has-face { padding-left: 20px; }
+  .vn-box.has-face .vn-face { display: none; }
+  .vn-box.has-face .vn-plate { left: 16px; }
+  .vn-plate { left: 16px; }
+  .vn-plate small { display: none; }
+  .vn-next span { display: none; }
+  .vn-choices { justify-content: flex-end; padding: 120px 16px calc(var(--box-h) + 40px); }
+  .vn-choice { gap: 10px; grid-template-columns: auto minmax(0, 1fr); padding: 10px 12px 10px 14px; }
+  .vn-choice-key, .vn-choice-arrow { display: none; }
+  .vn-choice-icon { height: 38px; width: 38px; }
+  .vn-choice-desc { font-size: .76rem; }
+}
+@media (max-height: 640px) {
+  :root { --box-h: 130px; }
+  .vn-box { padding-bottom: 20px; padding-top: 28px; }
+  .vn-choices { padding-bottom: 24px; }
+  .vn-stage.is-dim ~ .vn-ui .vn-box { opacity: 0; }
+  .vn-choice-desc { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
