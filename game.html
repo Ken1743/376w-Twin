@@ -179,7 +179,6 @@ html[data-lang="en"] [lang="ja"], html[data-lang="ja"] [lang="en"] { display: no
 .vn-demo-head { color: #fff; text-align: center; }
 .vn-demo-tag { background: #fff; border-radius: 999px; color: var(--blue); display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .14em; padding: 3px 12px; }
 .vn-demo-head p { font-size: 1.05rem; font-weight: 700; margin: 8px 0 2px; }
-.vn-demo-taps { color: #cbd5e1; font-size: .8rem; font-variant-numeric: tabular-nums; }
 .vn-phone {
   background: #f8fafc; border: 10px solid #111827; border-radius: 34px; box-shadow: 0 30px 70px rgba(0, 0, 0, .45); box-sizing: border-box;
   display: flex; flex-direction: column; height: min(560px, calc(100vh - 160px)); overflow: hidden; position: relative; width: min(340px, 100%);
@@ -215,11 +214,16 @@ html[data-lang="en"] [lang="ja"], html[data-lang="ja"] [lang="en"] { display: no
   pointer-events: none; position: absolute; right: 14px; top: 52px; transform: translateY(-8px); transition: opacity .2s, transform .2s;
 }
 .vn-phone-toast.is-shown { opacity: 1; transform: none; }
-.vn-demo-result { display: flex; flex-direction: column; gap: 4px; margin: auto 0; text-align: center; }
-.vn-demo-result p { color: var(--ink); margin: 0; }
-.vn-demo-big { color: var(--blue) !important; font-size: 3.4rem; font-weight: 900; line-height: 1; }
-.vn-demo-unit { color: var(--muted) !important; }
-.vn-demo-q { font-weight: 700; line-height: 1.6; margin: 12px 0 !important; }
+.vn-demo-review { background: #fff; border-radius: 24px; box-shadow: 0 24px 70px rgba(15, 23, 42, .3); box-sizing: border-box; color: var(--ink); flex: none; margin: auto; max-height: calc(100vh - 96px); max-width: 460px; overflow-y: auto; padding: clamp(20px, 5vw, 30px); text-align: center; width: 100%; }
+.vn-demo-review h2 { color: var(--ink); font-size: clamp(1.2rem, 4vw, 1.45rem); line-height: 1.35; margin: 14px 0 18px; }
+.vn-demo-metrics { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
+.vn-demo-metrics > div { background: #f1f5f9; border-radius: 16px; display: flex; flex-direction: column; gap: 3px; padding: 14px; }
+.vn-demo-metrics strong { color: var(--blue); font-size: 2rem; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.vn-demo-metrics strong small { font-size: .85rem; margin-left: 3px; }
+.vn-demo-metrics span { color: var(--muted); font-size: .8rem; }
+.vn-demo-q { background: #eef4ff; border-left: 4px solid var(--blue); border-radius: 10px; color: var(--ink); font-size: .98rem; font-weight: 700; line-height: 1.7; margin: 20px 0 !important; padding: 14px 16px; text-align: left; }
+.vn-demo-return { background: linear-gradient(120deg, #2f63d6, #1e4fb5); border: 0; border-radius: 14px; box-shadow: 0 8px 18px rgba(47, 99, 214, .25); color: #fff; cursor: pointer; font: 700 1rem var(--font); padding: 13px 24px; }
+.vn-demo-return:focus-visible { outline: 3px solid #93b4ff; outline-offset: 3px; }
 /* ---------- 後日談：ストアのレビュー ---------- */
 .vn-reviews, .vn-continue { display: none !important; }
 .vn-store-app { align-items: center; display: flex; gap: 12px; }
@@ -260,7 +264,6 @@ html[data-lang="en"] [lang="ja"], html[data-lang="ja"] [lang="en"] { display: no
 .vn-lost { background: #fef2f2; }
 .vn-lost h3 { color: #b91c1c; }
 
-.vn-demo-result .vn-demo-close { background: linear-gradient(120deg, #2f63d6, #1e4fb5); box-shadow: 0 8px 18px rgba(47, 99, 214, .35); }
 .vn-text { font-size: clamp(1rem, 1.55vw, 1.2rem); letter-spacing: .03em; line-height: 1.9; margin: 0; min-height: 3.8em; }
 .vn-sr { clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; position: absolute; width: 1px; }
 .vn-face {
@@ -510,7 +513,9 @@ html[data-lang="en"] [lang="ja"], html[data-lang="ja"] [lang="en"] { display: no
     demoTag: { en: "JORDAN’S VIEW", ja: "Jordan の視点" },
     demoTask: { en: "Try to cancel Jordan’s subscription.", ja: "Jordan のサブスクリプションを解約してみよう。" },
     pickReason: { en: "Pick a reason first.", ja: "先に理由を選んでください。" },
-    tapsUnit: { en: "taps to get this far", ja: "回のタップ" },
+    reviewTitle: { en: "After the attempt", ja: "体験を振り返る" },
+    reviewTaps: { en: "Taps", ja: "タップ数" },
+    reviewTime: { en: "Time", ja: "所要時間" },
     demoQuestion: { en: "Was the plan actually canceled? The screen never says so.", ja: "本当に解約できた？ 画面のどこにもそう書かれていない。" },
     demoClose: { en: "Back to the office", ja: "オフィスに戻る" },
     storeTag: { en: "APP STORE", ja: "アプリストア" },
@@ -555,7 +560,6 @@ html[data-lang="en"] [lang="ja"], html[data-lang="ja"] [lang="en"] { display: no
       primary: { label: { en: "Submit", ja: "送信" }, go: 5, needsReason: true } },
     { title: { en: "Request received", ja: "受付完了" },
       heading: { en: "Thanks! Your request has been received.", ja: "ありがとうございます。リクエストを受け付けました。" },
-      card: { en: "Plan status: Active · Renews Nov 1", ja: "プランの状態：有効・11月1日に更新" },
       primary: { label: { en: "Back to home", ja: "ホームに戻る" }, done: true } }
   ] };
   // AlternativePressure ルート：入口は見えるが、休会への誘導と罪悪感をあおる断り文句が続く
@@ -970,7 +974,7 @@ html[data-lang="en"] [lang="ja"], html[data-lang="ja"] [lang="en"] { display: no
     demo.reason = -1;
     demo.start = Date.now();
     demo.el = el("div", "vn-demo",
-      '<div class="vn-demo-head"><span class="vn-demo-tag">' + L(def.tag) + "</span><p>" + L(def.task) + '</p><span class="vn-demo-taps"></span></div>' +
+      '<div class="vn-demo-head"><span class="vn-demo-tag">' + L(def.tag) + "</span><p>" + L(def.task) + "</p></div>" +
       '<div class="vn-phone"><div class="vn-phone-bar"><b>LearnLoop</b><span>9:41</span></div><div class="vn-phone-screen"></div>' +
       '<div class="vn-phone-toast" aria-live="polite"></div></div>');
     demo.screen = demo.el.querySelector(".vn-phone-screen");
@@ -979,10 +983,6 @@ html[data-lang="en"] [lang="ja"], html[data-lang="ja"] [lang="en"] { display: no
     body.appendChild(demo.el);
     renderDemo(0);
     requestAnimationFrame(function () { demo.el.classList.add("is-open"); });
-  }
-
-  function updateTaps() {
-    demo.el.querySelector(".vn-demo-taps").innerHTML = L({ en: "Taps: " + demo.taps, ja: "タップ数：" + demo.taps });
   }
 
   function renderDemo(i) {
@@ -1007,7 +1007,6 @@ html[data-lang="en"] [lang="ja"], html[data-lang="ja"] [lang="en"] { display: no
     if (s.primary) { html += '<button type="button" class="vn-app-primary" data-act="' + act(s.primary) + '">' + L(s.primary.label) + "</button>"; }
     if (s.link) { html += '<button type="button" class="vn-app-link" data-act="' + act(s.link) + '">' + L(s.link.label) + "</button>"; }
     demo.screen.innerHTML = html;
-    updateTaps();
     var first = demo.screen.querySelector("button");
     if (first) { first.focus({ preventScroll: true }); }
   }
@@ -1026,8 +1025,8 @@ html[data-lang="en"] [lang="ja"], html[data-lang="ja"] [lang="en"] { display: no
     demo.taps += 1;
     var a = demo.actions[Number(b.dataset.act)];
     if (a.reason != null) { demo.reason = a.reason; renderDemo(demo.step); return; }
-    if (a.needsReason && demo.reason < 0) { demoToast(UI.pickReason); updateTaps(); return; }
-    if (a.toast) { demoToast(a.toast); updateTaps(); return; }
+    if (a.needsReason && demo.reason < 0) { demoToast(UI.pickReason); return; }
+    if (a.toast) { demoToast(a.toast); return; }
     if (a.done) { showDemoSummary(); return; }
     if (a.go != null) { renderDemo(a.go); }
   }
@@ -1035,13 +1034,13 @@ html[data-lang="en"] [lang="ja"], html[data-lang="ja"] [lang="en"] { display: no
   function showDemoSummary() {
     var secs = Math.max(1, Math.round((Date.now() - demo.start) / 1000));
     S.demoTaps = demo.taps;
-    demo.toast.classList.remove("is-shown");
-    updateTaps();
-    demo.screen.innerHTML = '<div class="vn-demo-result"><p class="vn-demo-big">' + demo.taps + '</p><p class="vn-demo-unit">' + L(UI.tapsUnit) + "</p>" +
-      "<p>" + L({ en: "Time: " + secs + " s", ja: "かかった時間：" + secs + " 秒" }) + "</p>" +
-      '<p class="vn-demo-q">' + L(demo.def.question) + "</p>" +
-      '<button type="button" class="vn-app-primary vn-demo-close">' + L(UI.demoClose) + "</button></div>";
-    demo.screen.querySelector(".vn-demo-close").focus({ preventScroll: true });
+    demo.el.innerHTML = '<section class="vn-demo-review" aria-labelledby="vn-demo-review-title">' +
+      '<span class="vn-demo-tag">' + L(demo.def.tag) + '</span><h2 id="vn-demo-review-title">' + L(UI.reviewTitle) + '</h2>' +
+      '<div class="vn-demo-metrics"><div><strong>' + demo.taps + '</strong><span>' + L(UI.reviewTaps) + '</span></div>' +
+      '<div><strong>' + secs + '<small>' + L({ en: "s", ja: "秒" }) + '</small></strong><span>' + L(UI.reviewTime) + '</span></div></div>' +
+      '<p class="vn-demo-q">' + L(demo.def.question) + '</p>' +
+      '<button type="button" class="vn-demo-return vn-demo-close">' + L(UI.demoClose) + '</button></section>';
+    demo.el.querySelector(".vn-demo-close").focus({ preventScroll: true });
     S.log.push({ note: true, text: { en: demo.def.log.en + ": " + demo.taps + " taps", ja: demo.def.log.ja + "：" + demo.taps + " 回タップ" } });
   }
 
