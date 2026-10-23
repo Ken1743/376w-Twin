@@ -73,7 +73,12 @@ The Exit Is Still There
 <div class="vn-line" data-who="saeki"><span lang="en">“The numbers are coming back. You really helped us out. Thank you.”</span><span lang="ja">「数字が戻ってきた。助かったよ、ありがとう。」</span></div>
 <div class="vn-line" data-stage=""><span lang="en">—A few days later.</span><span lang="ja">——数日後。</span></div>
 <div class="vn-line" data-who="takahashi"><span lang="en">“Do you have a minute? We’re getting more and more messages from people who thought they had canceled but were still charged.”</span><span lang="ja">「少しいいですか。解約したつもりなのに請求された、という問い合わせが増えています。」</span></div>
-<div class="vn-line" data-who="takahashi"><span lang="en">“One user, Jordan, couldn’t find how to cancel and ended up hitting the renewal date.”</span><span lang="ja">「Jordanさんという利用者は、解約方法が見つからないまま更新日を迎えてしまったそうです。」</span></div>
+<div class="vn-line" data-who="takahashi"><span lang="en">“Here’s one of them, from a user named Jordan.”</span><span lang="ja">「そのうちの一件です。Jordanさんという利用者からでした。」</span></div>
+<div class="vn-line" data-who="jordan"><span lang="en">“I finished the courses I needed, and I don’t have time to study anymore, so I tried to cancel my plan.”</span><span lang="ja">「必要な講座は受け終えたし、もう勉強する時間もないので、解約しようとしました。」</span></div>
+<div class="vn-line" data-who="jordan"><span lang="en">“But discount and pause offers kept popping up, and at the end I couldn’t tell whether it had worked. Then I was charged again.”</span><span lang="ja">「でも、割引や休会の案内が何度も出てきて、最後は解約できたのかも分かりませんでした。そして、また請求されたんです。」</span></div>
+<div class="vn-line" data-who="takahashi"><span lang="en">“Could you try the cancel flow yourself, the way Jordan would?”</span><span lang="ja">「一度、Jordanさんの立場で解約を試してみてもらえますか。」</span></div>
+<div class="vn-line" data-event="cancel-demo"></div>
+<div class="vn-line" data-who="you"><span lang="en">(I built this screen, and it still took me @TAPS@ taps. I can’t even tell whether the plan was canceled.)</span><span lang="ja">（自分で作った画面なのに、@TAPS@ 回もタップした。しかも、解約できたのかすら分からない。）</span></div>
 <div class="vn-line" data-who="reflect"><span lang="en">Does a short-term gain in retention justify the burden this screen puts on users?</span><span lang="ja">短期的な継続率の改善は、画面が利用者に与える負担を正当化するだろうか。</span></div>
 <div class="vn-line" data-who="you"><span lang="en">(How should I handle this…?)</span><span lang="ja">（この問題を、どう扱えばいい……？）</span></div>
 <div class="vn-choices" data-prompt-en="How will you handle this?" data-prompt-ja="この問題をどう扱う？">
@@ -90,15 +95,7 @@ The Exit Is Still There
 <div class="vn-line" data-who="saeki"><span lang="en">“How many users are actually struggling? And can your proposal keep retention up? That’s what I need to know.”</span><span lang="ja">「実際にどれほどの利用者が困っているのか。君の案で継続率を保てるのか。そこを知りたい。」</span></div>
 <div class="vn-line" data-who="you"><span lang="en">“Let us run a small trial that measures three things together: how many users complete cancellation, how many confused support requests come in, and how often users choose an optional plan change.”</span><span lang="ja">「解約を完了できた割合、誤解による問い合わせ数、任意のプラン変更率。この三つを合わせて測る、小規模な試行をさせてください。」</span></div>
 <div class="vn-line" data-who="saeki"><span lang="en">“…On the condition that it doesn’t block users’ choices. All right. Let’s try it.”</span><span lang="ja">「……利用者の選択を妨げない、という条件付きでだな。分かった。試してみよう。」</span></div>
-<div class="vn-ending" data-id="1">
-<div class="vn-ending-card">
-<p class="vn-ending-label">ENDING 1 ・ <span lang="en">PROVISIONAL</span><span lang="ja">暫定エンディング</span></p>
-<h2><span lang="en">A Step Toward Repair</span><span lang="ja">修正への一歩</span></h2>
-<p><span lang="en">You documented the problems caused by the first implementation and started working to fix them. Whether you can win back trust depends on what you do next.</span><span lang="ja">最初の実装で生じた問題を記録し、改善に動き出しました。信頼を取り戻せるかは、これからの対応にかかっています。</span></p>
-<p class="vn-ending-discuss"><span lang="en">Talk with your team about why you chose this path and what safeguards you would add.</span><span lang="ja">この経路を選んだ理由や、あなたなら加える対策をチームで話し合ってみてください。</span></p>
-<div class="vn-ending-actions"><div class="vn-btn"><span lang="en">Play again from the start</span><span lang="ja">最初からもう一度プレイする</span>[[Play again->Start]]</div></div>
-</div>
-</div>
+<div class="vn-continue">[[Continue->ImplementRespondAfter]]</div>
 </div>
 
 :: ImplementDefend
@@ -108,14 +105,7 @@ The Exit Is Still There
 <div class="vn-line" data-who="notice"><span lang="en">Support inbox: new messages about canceling have arrived.</span><span lang="ja">サポート受信箱：解約に関する新しい相談が届いています。</span></div>
 <div class="vn-line"><span lang="en">Messages about canceling kept coming, and the support team found themselves repeating the same explanation again and again.</span><span lang="ja">その後も解約に関する相談は続き、サポート担当者は同じ説明を何度も繰り返すようになった。</span></div>
 <div class="vn-line" data-who="you"><span lang="en">(The retention numbers look good. But they don’t show the people who are stuck, unable to cancel.)</span><span lang="ja">（継続率の数字は良い。でも、この数字には「解約できずに困っている人」は映らない。）</span></div>
-<div class="vn-ending" data-id="2">
-<div class="vn-ending-card">
-<p class="vn-ending-label">ENDING 2 ・ <span lang="en">PROVISIONAL</span><span lang="ja">暫定エンディング</span></p>
-<h2><span lang="en">Behind the Numbers</span><span lang="ja">数字の向こう側</span></h2>
-<p><span lang="en">The short-term metric improved, but problems remained with user trust and the burden on support. Choosing what to measure is itself a decision about what you value.</span><span lang="ja">短期の指標は改善しましたが、利用者の信頼とサポートへの負担に問題が残りました。測る指標を選ぶこと自体が、何を大切にするかの判断になります。</span></p>
-<div class="vn-ending-actions"><div class="vn-btn"><span lang="en">Play again from the start</span><span lang="ja">最初からもう一度プレイする</span>[[Play again->Start]]</div></div>
-</div>
-</div>
+<div class="vn-continue">[[Continue->ImplementDefendAfter]]</div>
 </div>
 
 :: Refuse
@@ -138,14 +128,7 @@ The Exit Is Still There
 <div class="vn-line" data-who="takahashi"><span lang="en">“Let’s also run a user test to check whether people can actually find the cancel button.”</span><span lang="ja">「それと、解約ボタンを見つけられるかを確かめるユーザーテストもやりましょう。」</span></div>
 <div class="vn-line" data-stage="takahashi saeki"><span lang="en">At the meeting the next day, Director Saeki stared at the numbers in the report for a long moment.</span><span lang="ja">翌日の会議。佐伯部長は、資料の数字をしばらく見つめていた。</span></div>
 <div class="vn-line" data-who="saeki"><span lang="en">“…Let’s put the decision on hold. We’ll take time to consider other options.”</span><span lang="ja">「……判断は保留にしよう。別案を検討する時間を取る。」</span></div>
-<div class="vn-ending" data-id="3">
-<div class="vn-ending-card">
-<p class="vn-ending-label">ENDING 3 ・ <span lang="en">PROVISIONAL</span><span lang="ja">暫定エンディング</span></p>
-<h2><span lang="en">Opening the Conversation</span><span lang="ja">話し合いを開く</span></h2>
-<p><span lang="en">Backing your refusal with evidence gave the team a chance to rethink its options. The door is now open to bringing users’ voices into the decision.</span><span lang="ja">拒否に根拠を添えたことで、チームで選択肢を見直す機会が生まれました。利用者の声を意思決定に含める道が開かれています。</span></p>
-<div class="vn-ending-actions"><div class="vn-btn"><span lang="en">Play again from the start</span><span lang="ja">最初からもう一度プレイする</span>[[Play again->Start]]</div></div>
-</div>
-</div>
+<div class="vn-continue">[[Continue->RefuseEvidenceAfter]]</div>
 </div>
 
 :: RefuseStand
@@ -155,14 +138,7 @@ The Exit Is Still There
 <div class="vn-line"><span lang="en">But you didn’t share your reasons or the impact on users. Director Saeki can’t see another way forward.</span><span lang="ja">しかし、判断の根拠や利用者への影響は共有しなかった。佐伯部長には、代わりの進め方が見えない。</span></div>
 <div class="vn-line"><span lang="en">The meeting ended without a conclusion.</span><span lang="ja">会議は、結論が出ないまま終わった。</span></div>
 <div class="vn-line" data-who="you"><span lang="en">(Refusing wasn’t wrong. …But did it actually change anything?)</span><span lang="ja">（断ったことは間違っていない。……でも、これで何かが変わったんだろうか。）</span></div>
-<div class="vn-ending" data-id="4">
-<div class="vn-ending-card">
-<p class="vn-ending-label">ENDING 4 ・ <span lang="en">PROVISIONAL</span><span lang="ja">暫定エンディング</span></p>
-<h2><span lang="en">Refusal Is Not the End</span><span lang="ja">拒否だけでは終わらない</span></h2>
-<p><span lang="en">Drawing a line matters. But by explaining your reasons and looking for a workable path, you may be able to change the team’s decision.</span><span lang="ja">境界線を示すことは大切ですが、根拠を伝え、実行可能な道を探ることで、チームの判断を変えられる可能性があります。</span></p>
-<div class="vn-ending-actions"><div class="vn-btn"><span lang="en">Play again from the start</span><span lang="ja">最初からもう一度プレイする</span>[[Play again->Start]]</div></div>
-</div>
-</div>
+<div class="vn-continue">[[Continue->RefuseStandAfter]]</div>
 </div>
 
 :: Alternative
@@ -185,14 +161,7 @@ The Exit Is Still There
 <div class="vn-line" data-who="takahashi"><span lang="en">“The cancel button stays just as easy to find. Declining a pause or a cheaper plan won’t add any steps.”</span><span lang="ja">「解約ボタンの見つけやすさは変えない。休会や低価格プランを断っても、手続きは増やさない。」</span></div>
 <div class="vn-line" data-who="takahashi"><span lang="en">“And users must always be able to complete their cancellation. Those are our three conditions.”</span><span lang="ja">「そして、利用者が確実に解約を完了できること。この三つが条件です。」</span></div>
 <div class="vn-line" data-who="saeki"><span lang="en">“We won’t look at retention alone. Let’s track the cancellation completion rate and support requests, too.”</span><span lang="ja">「見るのは継続率だけじゃない。解約完了率と問い合わせも確認しよう。」</span></div>
-<div class="vn-ending" data-id="5">
-<div class="vn-ending-card">
-<p class="vn-ending-label">ENDING 5 ・ <span lang="en">PROVISIONAL</span><span lang="ja">暫定エンディング</span></p>
-<h2><span lang="en">A Proposal Users Can Choose</span><span lang="ja">選べる提案</span></h2>
-<p><span lang="en">You found a way to offer users real options while still exploring the business case. Deciding how to judge the results is the team’s next challenge.</span><span lang="ja">利用者に選択肢を示しながら、事業上の案も検討する方法を作りました。試験結果をどう評価するかは、チームに残された次の課題です。</span></p>
-<div class="vn-ending-actions"><div class="vn-btn"><span lang="en">Play again from the start</span><span lang="ja">最初からもう一度プレイする</span>[[Play again->Start]]</div></div>
-</div>
-</div>
+<div class="vn-continue">[[Continue->AlternativeTestAfter]]</div>
 </div>
 
 :: AlternativePressure
@@ -200,13 +169,136 @@ The Exit Is Still There
 <div class="vn-scene" data-bg="evening" data-day="DAY 04" data-place="EXPERIMENT DESIGN" data-title-en="When a proposal becomes pressure" data-title-ja="提案が圧力に変わる" data-cast="saeki">
 <div class="vn-line"><span lang="en">You made the pause offer prominent and tucked the option to decline out of sight.</span><span lang="ja">休会案を強く勧め、断る操作は目立たない場所に置いた。</span></div>
 <div class="vn-line" data-who="saeki"><span lang="en">“Make the pause offer big and the decline link low-key. That should get us to our target.”</span><span lang="ja">「休会の案内は大きく、断るリンクは控えめに。これなら目標に届くはずだ。」</span></div>
+<div class="vn-line" data-who="takahashi"><span lang="en">“Before we ship it, could you try canceling the way a user who has already decided to leave would?”</span><span lang="ja">「リリースの前に、もう解約すると決めた利用者のつもりで、一度試してもらえますか。」</span></div>
+<div class="vn-line" data-event="pressure-demo"></div>
+<div class="vn-line" data-who="you"><span lang="en">(The cancel button was right there. Still, it took @TAPS@ taps, and every screen tried to talk me out of it.)</span><span lang="ja">（解約ボタンはすぐに見つかった。それでも @TAPS@ 回タップして、どの画面も引き止めてきた。）</span></div>
 <div class="vn-line"><span lang="en">It looked like an alternative, but the structure still made it hard for users to choose to cancel.</span><span lang="ja">見た目は別案でも、利用者が解約を選びにくい構造が残った。</span></div>
 <div class="vn-line" data-who="takahashi"><span lang="en">“Adding options doesn’t mean much if declining them is made difficult. That isn’t a free choice.”</span><span lang="ja">「選択肢を増やしても、断りにくくしたら、自由な選択とは言えません。」</span></div>
+<div class="vn-continue">[[Continue->AlternativePressureAfter]]</div>
+</div>
+
+:: ImplementRespondAfter
+(display: "HUD")
+<div class="vn-scene" data-bg="evening" data-day="3 WEEKS LATER" data-place="EPILOGUE" data-title-en="What the users said" data-title-ja="利用者の声" data-cast="">
+<div class="vn-line" data-stage=""><span lang="en">Three weeks into the trial, users were completing cancellations again, and confused support requests had dropped.</span><span lang="ja">試行を始めて3週間。解約を完了できる人の割合は戻り、誤解による問い合わせも減った。</span></div>
+<div class="vn-line"><span lang="en">But retention fell below last month’s level, and Director Saeki had to explain it to the board.</span><span lang="ja">しかし継続率は前月を下回り、佐伯部長は役員会で説明を求められた。</span></div>
+<div class="vn-line"><span lang="en">After work, you opened LearnLoop’s page on the app store.</span><span lang="ja">仕事終わりに、あなたはストアの LearnLoop のページを開いた。</span></div>
+<div class="vn-line" data-event="reviews" data-stage="you"></div>
+<div class="vn-reviews" data-rating="3.6" data-trend="up"><div class="vn-review" data-name="Jordan" data-stars="3"><span lang="en">I got charged because I couldn’t find how to cancel, but support refunded me. Now the cancel button is easy to find. It should have been like this from the start.</span><span lang="ja">解約できずに請求されたけど、問い合わせたら返金してくれた。今は解約ボタンがすぐ見つかる。最初からこうしてほしかった。</span></div><div class="vn-review" data-name="Aki" data-stars="4"><span lang="en">It offered me a pause, but when I said no, I could cancel right away. No hard sell.</span><span lang="ja">休会の案内は出たけど、断ったらすぐ解約できた。押し売り感がない。</span></div><div class="vn-review" data-name="Sam" data-stars="2"><span lang="en">Last month was awful. I can see it’s better now, but I’m not sure I’ll come back.</span><span lang="ja">先月は本当にひどかった。改善したのは分かるけど、また使うかは様子見。</span></div></div>
+<div class="vn-line" data-who="you"><span lang="en">(The fix is reaching people. But “It should have been like this from the start” still stings.)</span><span lang="ja">（直したことは届いている。でも「最初から」という言葉が刺さる。）</span></div>
+<div class="vn-ending" data-id="1">
+<div class="vn-ending-card">
+<p class="vn-ending-label">ENDING 1</p>
+<h2><span lang="en">A Step Toward Repair</span><span lang="ja">修正への一歩</span></h2>
+<p><span lang="en">You documented the problems caused by the first implementation and started working to fix them. Whether you can win back trust depends on what you do next.</span><span lang="ja">最初の実装で生じた問題を記録し、改善に動き出しました。信頼を取り戻せるかは、これからの対応にかかっています。</span></p>
+<div class="vn-ending-ledger"><div class="vn-kept"><h3><span lang="en">What was protected</span><span lang="ja">守れたもの</span></h3><p><span lang="en">Users’ ability to cancel on their own, and a team willing to fix its mistakes.</span><span lang="ja">利用者が自分で解約できる状態と、問題を直そうとするチームの姿勢。</span></p></div><div class="vn-lost"><h3><span lang="en">What was lost</span><span lang="ja">失ったもの</span></h3><p><span lang="en">Short-term retention, and the trust of users who left after the first release.</span><span lang="ja">短期の継続率と、最初の実装で離れていった利用者の信頼。</span></p></div></div>
+<p class="vn-ending-discuss"><span lang="en">Talk with your team about why you chose this path and what safeguards you would add.</span><span lang="ja">この経路を選んだ理由や、あなたなら加える対策をチームで話し合ってみてください。</span></p>
+<p class="vn-ending-code"><span lang="en"><b>ACM Code: 1.2 Avoid harm · 2.5 Evaluate systems’ impacts and risks thoroughly</b>When your work causes unintended harm, you share responsibility for measuring it and helping to undo it.</span><span lang="ja"><b>ACM倫理綱領：1.2「害を避ける」・2.5「システムの影響とリスクを十分に評価する」</b>自分の仕事が意図しない害を生んだとき、その影響を確かめ、取り除く努力をする責任があります。</span></p>
+<div class="vn-ending-actions"><div class="vn-btn"><span lang="en">Play again from the start</span><span lang="ja">最初からもう一度プレイする</span>[[Play again->Start]]</div></div>
+</div>
+</div>
+</div>
+
+:: ImplementDefendAfter
+(display: "HUD")
+<div class="vn-scene" data-bg="night" data-day="1 MONTH LATER" data-place="EPILOGUE" data-title-en="What the users said" data-title-ja="利用者の声" data-cast="">
+<div class="vn-line" data-stage=""><span lang="en">One month later, retention hit its target. Director Saeki announced that the free courses would continue.</span><span lang="ja">1か月後、継続率は目標を達成した。佐伯部長は、無料講座の継続を発表した。</span></div>
+<div class="vn-line"><span lang="en">That night, you opened LearnLoop’s page on the app store.</span><span lang="ja">その夜、あなたはストアの LearnLoop のページを開いた。</span></div>
+<div class="vn-line" data-event="reviews" data-stage="you"></div>
+<div class="vn-reviews" data-rating="1.9" data-trend="down"><div class="vn-review" data-name="Jordan" data-stars="1"><span lang="en">I canceled, or thought I did, and got charged again. I’ve contacted my card company.</span><span lang="ja">解約したはずなのに、また請求された。カード会社に連絡しました。</span></div><div class="vn-review" data-name="Mei" data-stars="1"><span lang="en">There’s no cancel button anywhere. This app feels like a trap.</span><span lang="ja">解約ボタンがどこにもない。罠みたいなアプリ。</span></div><div class="vn-review" data-name="Leo" data-stars="4"><span lang="en">I like the courses. But the way canceling works scares me, so I can’t recommend it to friends.</span><span lang="ja">講座の内容は好き。でも解約の仕組みが怖くて、友達には勧められない。</span></div></div>
+<div class="vn-line" data-who="you"><span lang="en">(On the internal dashboard, retention is still green.)</span><span lang="ja">（社内のダッシュボードでは、継続率は緑のままだ。）</span></div>
+<div class="vn-line"><span lang="en">The next week, Takahashi asked to transfer to another team.</span><span lang="ja">翌週、高橋は別のチームへの異動を願い出た。</span></div>
+<div class="vn-ending" data-id="2">
+<div class="vn-ending-card">
+<p class="vn-ending-label">ENDING 2</p>
+<h2><span lang="en">Behind the Numbers</span><span lang="ja">数字の向こう側</span></h2>
+<p><span lang="en">The short-term metric improved, but problems remained with user trust and the burden on support. Choosing what to measure is itself a decision about what you value.</span><span lang="ja">短期の指標は改善しましたが、利用者の信頼とサポートへの負担に問題が残りました。測る指標を選ぶこと自体が、何を大切にするかの判断になります。</span></p>
+<div class="vn-ending-ledger"><div class="vn-kept"><h3><span lang="en">What was protected</span><span lang="ja">守れたもの</span></h3><p><span lang="en">Short-term revenue and the free courses.</span><span lang="ja">短期の売上と、無料講座の継続。</span></p></div><div class="vn-lost"><h3><span lang="en">What was lost</span><span lang="ja">失ったもの</span></h3><p><span lang="en">User trust, the app’s reputation, and a colleague who cared about users.</span><span lang="ja">利用者の信頼、アプリの評判、そして利用者を大切にしていた仲間。</span></p></div></div>
+<p class="vn-ending-code"><span lang="en"><b>ACM Code: 1.3 Be honest and trustworthy · 3.1 Keep the public good central</b>A design that leaves users unsure whether they have canceled is not honest, even when the metrics look good.</span><span lang="ja"><b>ACM倫理綱領：1.3「誠実で信頼に足る行動をとる」・3.1「公共の利益を常に中心に置く」</b>解約できたかどうか利用者に分からない設計は、指標が良く見えても誠実とは言えません。</span></p>
+<div class="vn-ending-actions"><div class="vn-btn"><span lang="en">Play again from the start</span><span lang="ja">最初からもう一度プレイする</span>[[Play again->Start]]</div></div>
+</div>
+</div>
+</div>
+
+:: RefuseEvidenceAfter
+(display: "HUD")
+<div class="vn-scene" data-bg="evening" data-day="3 WEEKS LATER" data-place="EPILOGUE" data-title-en="What the users said" data-title-ja="利用者の声" data-cast="">
+<div class="vn-line" data-stage=""><span lang="en">After seeing the user test results, Director Saeki withdrew the plan to hide the cancel button.</span><span lang="ja">ユーザーテストの結果を見て、佐伯部長は解約ボタンを隠す案を取り下げた。</span></div>
+<div class="vn-line"><span lang="en">But revenue did not recover, and two of the free courses were put on hold.</span><span lang="ja">しかし売上は戻らず、無料講座のうち2つが休止になった。</span></div>
+<div class="vn-line"><span lang="en">You opened LearnLoop’s page on the app store.</span><span lang="ja">あなたは、ストアの LearnLoop のページを開いた。</span></div>
+<div class="vn-line" data-event="reviews" data-stage="you"></div>
+<div class="vn-reviews" data-rating="4.1" data-trend=""><div class="vn-review" data-name="Jordan" data-stars="5"><span lang="en">Canceled without any hassle. I’ll be back when I have more time.</span><span lang="ja">迷わず解約できた。時間ができたら、また戻ります。</span></div><div class="vn-review" data-name="Priya" data-stars="4"><span lang="en">Because canceling is easy, I felt safe signing up.</span><span lang="ja">解約が簡単なアプリだから、安心して登録できた。</span></div><div class="vn-review" data-name="Tom" data-stars="2"><span lang="en">My favorite free course was put on hold. Disappointing.</span><span lang="ja">好きだった無料講座が休止になった。残念。</span></div></div>
+<div class="vn-line" data-who="you"><span lang="en">(Something was protected. And something no longer reaches the people who needed it.)</span><span lang="ja">（守れたものがある。その代わりに、届かなくなったものもある。）</span></div>
+<div class="vn-ending" data-id="3">
+<div class="vn-ending-card">
+<p class="vn-ending-label">ENDING 3</p>
+<h2><span lang="en">Opening the Conversation</span><span lang="ja">話し合いを開く</span></h2>
+<p><span lang="en">Backing your refusal with evidence gave the team a chance to rethink its options. The door is now open to bringing users’ voices into the decision.</span><span lang="ja">拒否に根拠を添えたことで、チームで選択肢を見直す機会が生まれました。利用者の声を意思決定に含める道が開かれています。</span></p>
+<div class="vn-ending-ledger"><div class="vn-kept"><h3><span lang="en">What was protected</span><span lang="ja">守れたもの</span></h3><p><span lang="en">Users’ ability to cancel without confusion, and a team culture of deciding with evidence.</span><span lang="ja">利用者が迷わず解約できる状態と、根拠をもとに話し合うチームの文化。</span></p></div><div class="vn-lost"><h3><span lang="en">What was lost</span><span lang="ja">失ったもの</span></h3><p><span lang="en">Some free courses, and a place to learn for the users who relied on them.</span><span lang="ja">無料講座の一部と、それを頼りにしていた利用者の学びの場。</span></p></div></div>
+<p class="vn-ending-code"><span lang="en"><b>ACM Code: 2.4 Accept and provide appropriate professional review · 1.2 Avoid harm</b>Sharing evidence lets the team review the design together instead of relying on one person’s judgment.</span><span lang="ja"><b>ACM倫理綱領：2.4「適切な専門的レビューを受け、提供する」・1.2「害を避ける」</b>根拠を共有することで、一人の判断に頼らず、チームで設計を見直せます。</span></p>
+<div class="vn-ending-actions"><div class="vn-btn"><span lang="en">Play again from the start</span><span lang="ja">最初からもう一度プレイする</span>[[Play again->Start]]</div></div>
+</div>
+</div>
+</div>
+
+:: RefuseStandAfter
+(display: "HUD")
+<div class="vn-scene" data-bg="night" data-day="2 WEEKS LATER" data-place="EPILOGUE" data-title-en="What the users said" data-title-ja="利用者の声" data-cast="">
+<div class="vn-line" data-stage=""><span lang="en">Two weeks later, the release notes included a line you recognized: “Updated the account settings layout.”</span><span lang="ja">2週間後、リリースノートに見覚えのある一文があった。「アカウント設定のレイアウトを更新しました」。</span></div>
+<div class="vn-line"><span lang="en">Another engineer had built the same change.</span><span lang="ja">同じ変更を、別のエンジニアが実装していた。</span></div>
+<div class="vn-line"><span lang="en">You opened LearnLoop’s page on the app store.</span><span lang="ja">あなたは、ストアの LearnLoop のページを開いた。</span></div>
+<div class="vn-line" data-event="reviews" data-stage="you"></div>
+<div class="vn-reviews" data-rating="2.1" data-trend="down"><div class="vn-review" data-name="Jordan" data-stars="1"><span lang="en">Couldn’t find how to cancel, and got charged again.</span><span lang="ja">解約方法が見つからず、また請求された。</span></div><div class="vn-review" data-name="Mei" data-stars="1"><span lang="en">After the latest update, the cancel option vanished deep into the settings.</span><span lang="ja">最近のアップデートで、解約が設定の奥に消えた。</span></div><div class="vn-review" data-name="Sam" data-stars="2"><span lang="en">Canceling used to be easy. Why did they change it?</span><span lang="ja">前は簡単に解約できたのに、なぜ変えたの？</span></div></div>
+<div class="vn-line" data-who="you"><span lang="en">(I didn’t write that code. But I didn’t stop it, either.)</span><span lang="ja">（自分が書いたコードじゃない。でも、止めることもできなかった。）</span></div>
+<div class="vn-ending" data-id="4">
+<div class="vn-ending-card">
+<p class="vn-ending-label">ENDING 4</p>
+<h2><span lang="en">Refusal Is Not the End</span><span lang="ja">拒否だけでは終わらない</span></h2>
+<p><span lang="en">Drawing a line matters. But by explaining your reasons and looking for a workable path, you may be able to change the team’s decision.</span><span lang="ja">境界線を示すことは大切ですが、根拠を伝え、実行可能な道を探ることで、チームの判断を変えられる可能性があります。</span></p>
+<div class="vn-ending-ledger"><div class="vn-kept"><h3><span lang="en">What was protected</span><span lang="ja">守れたもの</span></h3><p><span lang="en">You did not take part in building a harmful design.</span><span lang="ja">自分が有害な設計の実装に加担しなかったこと。</span></p></div><div class="vn-lost"><h3><span lang="en">What was lost</span><span lang="ja">失ったもの</span></h3><p><span lang="en">The chance to protect users, and the conversation with your team.</span><span lang="ja">利用者を守る機会と、チームとの対話。</span></p></div></div>
+<p class="vn-ending-code"><span lang="en"><b>ACM Code: 2.4 Accept and provide appropriate professional review · 2.5 Evaluate systems’ impacts and risks thoroughly</b>Refusing harmful work matters, but explaining the risks is what helps others reconsider.</span><span lang="ja"><b>ACM倫理綱領：2.4「適切な専門的レビューを受け、提供する」・2.5「システムの影響とリスクを十分に評価する」</b>有害な作業を断ることは大切ですが、リスクを説明してこそ、周りの人も考え直すことができます。</span></p>
+<div class="vn-ending-actions"><div class="vn-btn"><span lang="en">Play again from the start</span><span lang="ja">最初からもう一度プレイする</span>[[Play again->Start]]</div></div>
+</div>
+</div>
+</div>
+
+:: AlternativeTestAfter
+(display: "HUD")
+<div class="vn-scene" data-bg="office" data-day="3 WEEKS LATER" data-place="EPILOGUE" data-title-en="What the users said" data-title-ja="利用者の声" data-cast="">
+<div class="vn-line" data-stage=""><span lang="en">Three weeks into the trial, retention was still below target, and Director Saeki was not satisfied.</span><span lang="ja">試験開始から3週間。継続率は目標に届かず、佐伯部長は不満そうだった。</span></div>
+<div class="vn-line"><span lang="en">Still, with fewer support requests and higher satisfaction, the team got approval to continue the trial.</span><span lang="ja">それでも、問い合わせの減少と満足度の向上を根拠に、試験の継続が認められた。</span></div>
+<div class="vn-line"><span lang="en">That evening, you opened LearnLoop’s page on the app store.</span><span lang="ja">その夕方、あなたはストアの LearnLoop のページを開いた。</span></div>
+<div class="vn-line" data-event="reviews" data-stage="you"></div>
+<div class="vn-reviews" data-rating="4.3" data-trend="up"><div class="vn-review" data-name="Jordan" data-stars="4"><span lang="en">There was a pause offer, but when I declined, I got a cancellation email right away. Clear and simple.</span><span lang="ja">休会の案内はあったけど、断ったらすぐに解約完了のメールが来た。分かりやすい。</span></div><div class="vn-review" data-name="Yui" data-stars="5"><span lang="en">I can pause during months full of night shifts. I restarted on my own two months later.</span><span lang="ja">夜勤が続く月だけ休会できて助かる。2か月後に自分で再開しました。</span></div><div class="vn-review" data-name="Aki" data-stars="3"><span lang="en">The discount offer could be a little less pushy.</span><span lang="ja">割引の案内は、もう少し控えめでもいいかも。</span></div></div>
+<div class="vn-line" data-who="you"><span lang="en">(We didn’t hit the number. Still, these voices show something the number can’t.)</span><span lang="ja">（目標の数字には届いていない。それでも、この声は数字に載らない何かを示している。）</span></div>
+<div class="vn-ending" data-id="5">
+<div class="vn-ending-card">
+<p class="vn-ending-label">ENDING 5</p>
+<h2><span lang="en">A Proposal Users Can Choose</span><span lang="ja">選べる提案</span></h2>
+<p><span lang="en">You found a way to offer users real options while still exploring the business case. Deciding how to judge the results is the team’s next challenge.</span><span lang="ja">利用者に選択肢を示しながら、事業上の案も検討する方法を作りました。試験結果をどう評価するかは、チームに残された次の課題です。</span></p>
+<div class="vn-ending-ledger"><div class="vn-kept"><h3><span lang="en">What was protected</span><span lang="ja">守れたもの</span></h3><p><span lang="en">Users who can make informed choices, and their trust.</span><span lang="ja">利用者が理解したうえで選べる状態と、利用者の信頼。</span></p></div><div class="vn-lost"><h3><span lang="en">What was lost</span><span lang="ja">失ったもの</span></h3><p><span lang="en">The short-term retention target. The team still has to agree on how to judge success.</span><span lang="ja">短期の継続率目標。成功をどう評価するか、チームで合意する課題も残った。</span></p></div></div>
+<p class="vn-ending-code"><span lang="en"><b>ACM Code: 1.3 Be honest and trustworthy · 2.5 Evaluate systems’ impacts and risks thoroughly</b>Offers can be fair when they are transparent, easy to decline, and measured for their effect on users.</span><span lang="ja"><b>ACM倫理綱領：1.3「誠実で信頼に足る行動をとる」・2.5「システムの影響とリスクを十分に評価する」</b>案内は、透明で断りやすく、利用者への影響を測っていれば、公正なものになり得ます。</span></p>
+<div class="vn-ending-actions"><div class="vn-btn"><span lang="en">Play again from the start</span><span lang="ja">最初からもう一度プレイする</span>[[Play again->Start]]</div></div>
+</div>
+</div>
+</div>
+
+:: AlternativePressureAfter
+(display: "HUD")
+<div class="vn-scene" data-bg="night" data-day="3 MONTHS LATER" data-place="EPILOGUE" data-title-en="What the users said" data-title-ja="利用者の声" data-cast="">
+<div class="vn-line" data-stage=""><span lang="en">The pause rate hit a record high, and Director Saeki reported the new design as a success.</span><span lang="ja">休会率は過去最高を記録し、佐伯部長は新しい画面を「成功」と報告した。</span></div>
+<div class="vn-line"><span lang="en">Three months later, billing restarted automatically for users whose pause had ended. Support requests surged.</span><span lang="ja">3か月後、休会期間が終わった利用者への課金が自動で再開され、問い合わせが急増した。</span></div>
+<div class="vn-line"><span lang="en">You opened LearnLoop’s page on the app store.</span><span lang="ja">あなたは、ストアの LearnLoop のページを開いた。</span></div>
+<div class="vn-line" data-event="reviews" data-stage="you"></div>
+<div class="vn-reviews" data-rating="2.4" data-trend="down"><div class="vn-review" data-name="Jordan" data-stars="1"><span lang="en">I tried to cancel and hit “pause” by mistake. Three months later, the charges started again on their own.</span><span lang="ja">解約しようとして、間違えて休会を押してしまった。3か月後、勝手に請求が再開した。</span></div><div class="vn-review" data-name="Priya" data-stars="2"><span lang="en">Making me tap “I don’t care about my progress” just feels mean.</span><span lang="ja">「学習の記録はどうでもいいです」を押させるのは、感じが悪い。</span></div><div class="vn-review" data-name="Leo" data-stars="4"><span lang="en">Being able to pause helped. But there was no notice before billing restarted.</span><span lang="ja">休会できたのは助かった。でも、再開前に通知がなかった。</span></div></div>
+<div class="vn-line" data-who="you"><span lang="en">(The pause rate is the highest it’s ever been. But whose choice was it, really?)</span><span lang="ja">（休会率は過去最高だ。でも、それは誰の選択だったんだろう。）</span></div>
 <div class="vn-ending" data-id="6">
 <div class="vn-ending-card">
-<p class="vn-ending-label">ENDING 6 ・ <span lang="en">PROVISIONAL</span><span lang="ja">暫定エンディング</span></p>
+<p class="vn-ending-label">ENDING 6</p>
 <h2><span lang="en">The Limits of an Alternative</span><span lang="ja">代替案の境界線</span></h2>
 <p><span lang="en">Even a well-meant proposal can become a way to steer users if declining is made difficult. What matters is not only whether options exist, but whether the freedom to say no is preserved.</span><span lang="ja">善意の提案も、断りにくく設計すれば利用者を誘導する仕組みになりえます。選択肢の存在だけでなく、断る自由が保たれているかが問われます。</span></p>
+<div class="vn-ending-ledger"><div class="vn-kept"><h3><span lang="en">What was protected</span><span lang="ja">守れたもの</span></h3><p><span lang="en">Short-term retention and the company’s target.</span><span lang="ja">一時的な継続率と、会社の目標。</span></p></div><div class="vn-lost"><h3><span lang="en">What was lost</span><span lang="ja">失ったもの</span></h3><p><span lang="en">Users’ freedom to say no, and the trust of those who relied on it.</span><span lang="ja">断る自由と、それを信じていた利用者の信頼。</span></p></div></div>
+<p class="vn-ending-code"><span lang="en"><b>ACM Code: 1.3 Be honest and trustworthy · 1.2 Avoid harm</b>Making “no” hard to choose is a form of deception, even when every option is technically on the screen.</span><span lang="ja"><b>ACM倫理綱領：1.3「誠実で信頼に足る行動をとる」・1.2「害を避ける」</b>すべての選択肢が画面にあっても、「断る」を選びにくくするのは、利用者を欺く設計の一種です。</span></p>
 <div class="vn-ending-actions"><div class="vn-btn"><span lang="en">Play again from the start</span><span lang="ja">最初からもう一度プレイする</span>[[Play again->Start]]</div></div>
 </div>
 </div>
@@ -229,7 +321,8 @@ The Exit Is Still There
   };
   var SPECIAL = {
     notice: { name: { en: "LearnLoop Alert", ja: "LearnLoop 通知" }, color: "#64748b", icon: "bell" },
-    reflect: { name: { en: "Think About It", ja: "考えてみよう" }, color: "#4f7fd6", icon: "bulb" }
+    reflect: { name: { en: "Think About It", ja: "考えてみよう" }, color: "#4f7fd6", icon: "bulb" },
+    jordan: { name: { en: "Jordan", ja: "Jordan" }, role: { en: "Support message from a user", ja: "利用者からの問い合わせ" }, color: "#5b6b8c", icon: "mail" }
   };
   var UI = {
     next: { en: "Click to continue", ja: "クリックで次へ" },
@@ -241,8 +334,90 @@ The Exit Is Still There
     prompt: { en: "What will you do?", ja: "どうする？" },
     found: { en: "Endings found", ja: "回収したエンディング" },
     more: { en: " — try a different choice", ja: "　— 別の選択も試してみよう" },
-    all: { en: " — you’ve seen every ending", ja: "　— すべての結末を見ました" }
+    all: { en: " — you’ve seen every ending", ja: "　— すべての結末を見ました" },
+    demoTag: { en: "JORDAN’S VIEW", ja: "Jordan の視点" },
+    demoTask: { en: "Try to cancel Jordan’s subscription.", ja: "Jordan のサブスクリプションを解約してみよう。" },
+    pickReason: { en: "Pick a reason first.", ja: "先に理由を選んでください。" },
+    tapsUnit: { en: "taps to get this far", ja: "回のタップ" },
+    demoQuestion: { en: "Was the plan actually canceled? The screen never says so.", ja: "本当に解約できた？ 画面のどこにもそう書かれていない。" },
+    demoClose: { en: "Back to the office", ja: "オフィスに戻る" },
+    storeTag: { en: "APP STORE", ja: "アプリストア" },
+    storeTask: { en: "What users are saying about LearnLoop", ja: "LearnLoop への利用者の声" },
+    storeSub: { en: "Education · Subscription", ja: "教育・サブスクリプション" },
+    storeHeading: { en: "Ratings & Reviews", ja: "評価とレビュー" },
+    trendUp: { en: "▲ Trending up", ja: "▲ 上昇中" },
+    trendDown: { en: "▼ Trending down", ja: "▼ 下降中" },
+    storeClose: { en: "Put the phone down", ja: "スマホを置く" }
   };
+
+  // 利用者の視点で体験する解約手続き（ルートごとに別のダークパターン）
+  var DEMOS = {};
+  // Implement ルート：解約の入口を隠し、引き止めを重ね、完了も曖昧にする
+  DEMOS["cancel-demo"] = { tag: UI.demoTag, task: UI.demoTask, question: UI.demoQuestion,
+    log: { en: "Tried Jordan’s cancel flow", ja: "Jordan の解約手続きを体験" }, screens: [
+    { title: { en: "Account", ja: "アカウント" }, items: [
+      { label: { en: "Profile", ja: "プロフィール" }, toast: { en: "Only Jordan’s name and photo are here.", ja: "名前と写真の設定しかない。" } },
+      { label: { en: "Notifications", ja: "通知" }, toast: { en: "Just email and push settings.", ja: "メールとプッシュ通知の設定だけだ。" } },
+      { label: { en: "Learning goals", ja: "学習目標" }, toast: { en: "Weekly study targets. No way to cancel here.", ja: "週ごとの学習目標。解約はここにもない。" } },
+      { label: { en: "Billing & plan", ja: "お支払いとプラン" }, go: 1 }
+    ] },
+    { title: { en: "Billing & plan", ja: "お支払いとプラン" },
+      card: { en: "Monthly plan · $14.99 · Renews Nov 1", ja: "月額プラン・1,980円・11月1日に更新" },
+      heading: { en: "Upgrade to Annual and save 40%!", ja: "年額プランなら40%お得！" },
+      primary: { label: { en: "Upgrade to Annual", ja: "年額プランにアップグレード" }, toast: { en: "That would sign Jordan up for a whole year!", ja: "それでは1年分の契約になってしまう！" } },
+      link: { label: { en: "Other options", ja: "その他のオプション" }, go: 2 } },
+    { title: { en: "Before you go…", ja: "その前に……" },
+      heading: { en: "Wait! Don’t lose your progress.", ja: "お待ちください！ 学習の記録が失われます。" },
+      text: { en: "Get 50% off for the next 3 months.", ja: "今なら3か月間50%オフ。" },
+      primary: { label: { en: "Claim my discount", ja: "割引を受け取る" }, toast: { en: "That keeps the subscription going.", ja: "それでは契約が続いてしまう。" } },
+      link: { label: { en: "No thanks, continue", ja: "いいえ、続ける" }, go: 3 } },
+    { title: { en: "Need a break?", ja: "少し休みませんか？" },
+      heading: { en: "Pause instead of leaving", ja: "解約ではなく休会しませんか" },
+      text: { en: "Keep your streak and certificates. Pause for up to 3 months.", ja: "連続記録と修了証はそのまま。最大3か月休会できます。" },
+      primary: { label: { en: "Pause my plan", ja: "休会する" }, toast: { en: "Pausing isn’t canceling.", ja: "休会は解約ではない。" } },
+      link: { label: { en: "Continue to cancel", ja: "解約を続ける" }, go: 4 } },
+    { title: { en: "One last step", ja: "最後のステップ" },
+      heading: { en: "Tell us why you’re leaving", ja: "解約の理由を教えてください" },
+      reasons: [{ en: "I finished the courses I needed", ja: "必要な講座を受け終えた" }, { en: "I don’t have time to study", ja: "勉強する時間がない" },
+                { en: "It’s too expensive", ja: "料金が高い" }, { en: "Other", ja: "その他" }],
+      primary: { label: { en: "Submit", ja: "送信" }, go: 5, needsReason: true } },
+    { title: { en: "Request received", ja: "受付完了" },
+      heading: { en: "Thanks! Your request has been received.", ja: "ありがとうございます。リクエストを受け付けました。" },
+      card: { en: "Plan status: Active · Renews Nov 1", ja: "プランの状態：有効・11月1日に更新" },
+      primary: { label: { en: "Back to home", ja: "ホームに戻る" }, done: true } }
+  ] };
+  // AlternativePressure ルート：入口は見えるが、休会への誘導と罪悪感をあおる断り文句が続く
+  DEMOS["pressure-demo"] = {
+    tag: { en: "A USER’S VIEW", ja: "利用者の視点" },
+    task: { en: "Try to cancel the subscription with the new design.", ja: "新しい画面で、サブスクリプションを解約してみよう。" },
+    question: { en: "The cancel button was easy to find, and canceling did work. But every screen pushed you toward “pause.” Was that a free choice?",
+                ja: "解約ボタンは見つけやすく、解約もできた。でも、どの画面も「休会」へ誘導していた。これは自由な選択だった？" },
+    log: { en: "Tried the new cancel flow", ja: "新しい解約手続きを体験" }, screens: [
+    { title: { en: "Account", ja: "アカウント" }, items: [
+      { label: { en: "Profile", ja: "プロフィール" }, toast: { en: "Only a name and photo here.", ja: "名前と写真の設定しかない。" } },
+      { label: { en: "Notifications", ja: "通知" }, toast: { en: "Just email and push settings.", ja: "メールとプッシュ通知の設定だけだ。" } },
+      { label: { en: "Billing & plan", ja: "お支払いとプラン" }, toast: { en: "Just the payment card on file.", ja: "支払いカードの情報だけだ。" } },
+      { label: { en: "Cancel subscription", ja: "サブスクリプションを解約" }, go: 1 }
+    ] },
+    { title: { en: "Cancel subscription", ja: "サブスクリプションの解約" },
+      heading: { en: "Wait! Pause instead and keep everything.", ja: "お待ちください！ 休会すれば、すべてそのままです。" },
+      text: { en: "Your 42-day streak, notes, and certificates stay safe while you’re away.", ja: "42日間の連続記録、ノート、修了証はそのまま保存されます。" },
+      primary: { label: { en: "Pause for 3 months (free)", ja: "3か月無料で休会する" }, toast: { en: "Pausing isn’t canceling.", ja: "休会は解約ではない。" } },
+      link: { label: { en: "No thanks, I don’t care about my progress", ja: "いいえ、学習の記録はどうでもいいです" }, go: 2 } },
+    { title: { en: "Are you sure?", ja: "本当によろしいですか？" },
+      heading: { en: "You’ll lose your 42-day streak forever.", ja: "42日間の連続記録が完全に失われます。" },
+      text: { en: "Most learners who pause come back within a month.", ja: "休会した人の多くは、1か月以内に戻ってきています。" },
+      primary: { label: { en: "Keep my streak and pause", ja: "記録を守って休会する" }, toast: { en: "Another pause button…", ja: "また休会のボタンだ……" } },
+      link: { label: { en: "Cancel anyway", ja: "それでも解約する" }, go: 3 } },
+    { title: { en: "Last chance", ja: "最後のご案内" },
+      heading: { en: "Special offer: 3 months free, then 50% off.", ja: "特別オファー：3か月無料、その後50%オフ。" },
+      primary: { label: { en: "Accept offer", ja: "オファーを受け取る" }, toast: { en: "Still not canceling.", ja: "これも解約ではない。" } },
+      link: { label: { en: "Decline offer and cancel", ja: "オファーを断って解約する" }, go: 4 } },
+    { title: { en: "Canceled", ja: "解約完了" },
+      heading: { en: "Your subscription has been canceled.", ja: "サブスクリプションを解約しました。" },
+      card: { en: "Plan ends Nov 1 · You won’t be charged again", ja: "11月1日でプラン終了・今後の請求はありません" },
+      primary: { label: { en: "Done", ja: "完了" }, done: true } }
+  ] };
   var TONES = {
     company: { color: "#c47a1f", icon: "company" },
     user: { color: "#11867c", icon: "user" },
@@ -266,12 +441,13 @@ The Exit Is Still There
     team: '<circle cx="9" cy="9" r="3"/><circle cx="16.5" cy="10" r="2.5"/><path d="M3 19c0-3 2.7-5 6-5s6 2 6 5M15.5 14.5c2.8 0 5 1.6 5 4.5"/>',
     bell: '<path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 20a2 2 0 0 0 4 0"/>',
     bulb: '<path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/>',
-    log: '<path d="M5 6h14M5 12h14M5 18h9"/>'
+    log: '<path d="M5 6h14M5 12h14M5 18h9"/>',
+    mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>'
   };
 
   var reduceMotion = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
   var S = { mode: "idle", passage: null, lines: [], i: -1, typing: false, timer: 0, chapterTimer: 0,
-            full: null, talker: null, cast: [], stats: null, log: [], choices: null, ending: null };
+            full: null, talker: null, cast: [], stats: null, log: [], choices: null, ending: null, demoTaps: 7 };
   var lang = "en";
   try { lang = localStorage.getItem(LANG_KEY) === "ja" ? "ja" : "en"; } catch (e) { /* 既定の英語のまま */ }
 
@@ -526,10 +702,11 @@ The Exit Is Still There
     setCast(words(scene.dataset.cast));
     setSpeaker(null);
     S.lines = Array.prototype.map.call(scene.querySelectorAll(".vn-line"), function (line) {
-      return { who: line.dataset.who || "", text: textPair(line),
+      return { who: line.dataset.who || "", event: line.dataset.event || "", text: textPair(line),
                stage: line.hasAttribute("data-stage") ? words(line.dataset.stage) : null };
     });
     S.i = -1;
+    S.scene = scene;
     S.choices = scene.querySelector(".vn-choices");
     S.ending = scene.querySelector(".vn-ending");
     if (S.choices) { decorateChoices(S.choices); }
@@ -556,6 +733,13 @@ The Exit Is Still There
     S.i += 1;
     if (S.i >= S.lines.length) { finishScene(); return; }
     var line = S.lines[S.i];
+    if (line.event) {
+      if (line.stage) { setCast(line.stage); }
+      setSpeaker(null);
+      if (DEMOS[line.event]) { openDemo(DEMOS[line.event]); return; }
+      if (line.event === "reviews") { openReviews(S.scene.querySelector(".vn-reviews")); return; }
+    }
+    var text = { en: line.text.en.replace("@TAPS@", S.demoTaps), ja: line.text.ja.replace("@TAPS@", S.demoTaps) };
     if (line.stage) {
       setCast(line.stage);
     } else if (CAST[line.who] && line.who !== "you" && S.cast.indexOf(line.who) < 0) {
@@ -573,9 +757,9 @@ The Exit Is Still There
     void box.offsetWidth;
     box.classList.add("is-pop");
     setSpeaker(onStage ? line.who : null);
-    S.log.push({ name: info ? info.name : null, color: info ? info.color : "", text: line.text });
-    srEl.textContent = line.text[lang];
-    typeText(line.text, onStage ? spriteOf(line.who) : null);
+    S.log.push({ name: info ? info.name : null, color: info ? info.color : "", text: text });
+    srEl.textContent = text[lang];
+    typeText(text, onStage ? spriteOf(line.who) : null);
   }
 
   function typeText(pair, sprite) {
@@ -603,12 +787,151 @@ The Exit Is Still There
     box.classList.add("is-ready");
   }
 
+  // ---- 解約画面の体験 ----
+  var demo = { el: null, screen: null, toast: null, toastTimer: 0, step: 0, taps: 0, start: 0, reason: -1, actions: [] };
+
+  function openDemo(def) {
+    demo.def = def;
+    S.mode = "demo";
+    box.classList.add("is-hidden");
+    demo.taps = 0;
+    demo.reason = -1;
+    demo.start = Date.now();
+    demo.el = el("div", "vn-demo",
+      '<div class="vn-demo-head"><span class="vn-demo-tag">' + L(def.tag) + "</span><p>" + L(def.task) + '</p><span class="vn-demo-taps"></span></div>' +
+      '<div class="vn-phone"><div class="vn-phone-bar"><b>LearnLoop</b><span>9:41</span></div><div class="vn-phone-screen"></div>' +
+      '<div class="vn-phone-toast" aria-live="polite"></div></div>');
+    demo.screen = demo.el.querySelector(".vn-phone-screen");
+    demo.toast = demo.el.querySelector(".vn-phone-toast");
+    demo.el.addEventListener("click", onDemoClick);
+    body.appendChild(demo.el);
+    renderDemo(0);
+    requestAnimationFrame(function () { demo.el.classList.add("is-open"); });
+  }
+
+  function updateTaps() {
+    demo.el.querySelector(".vn-demo-taps").innerHTML = L({ en: "Taps: " + demo.taps, ja: "タップ数：" + demo.taps });
+  }
+
+  function renderDemo(i) {
+    var s = demo.def.screens[i];
+    demo.step = i;
+    demo.actions = [];
+    function act(a) { demo.actions.push(a); return demo.actions.length - 1; }
+    var html = '<h3 class="vn-app-title">' + L(s.title) + "</h3>";
+    if (s.items) {
+      html += '<ul class="vn-app-list">' + s.items.map(function (it) {
+        return '<li><button type="button" data-act="' + act(it) + '">' + L(it.label) + "<span>›</span></button></li>";
+      }).join("") + "</ul>";
+    }
+    if (s.card) { html += '<div class="vn-app-card">' + L(s.card) + "</div>"; }
+    if (s.heading) { html += '<p class="vn-app-heading">' + L(s.heading) + "</p>"; }
+    if (s.text) { html += '<p class="vn-app-text">' + L(s.text) + "</p>"; }
+    if (s.reasons) {
+      html += '<div class="vn-app-reasons">' + s.reasons.map(function (r, n) {
+        return '<button type="button" class="vn-app-reason' + (demo.reason === n ? " is-on" : "") + '" data-act="' + act({ reason: n }) + '">' + L(r) + "</button>";
+      }).join("") + "</div>";
+    }
+    if (s.primary) { html += '<button type="button" class="vn-app-primary" data-act="' + act(s.primary) + '">' + L(s.primary.label) + "</button>"; }
+    if (s.link) { html += '<button type="button" class="vn-app-link" data-act="' + act(s.link) + '">' + L(s.link.label) + "</button>"; }
+    demo.screen.innerHTML = html;
+    updateTaps();
+    var first = demo.screen.querySelector("button");
+    if (first) { first.focus({ preventScroll: true }); }
+  }
+
+  function demoToast(pair) {
+    demo.toast.innerHTML = L(pair);
+    demo.toast.classList.add("is-shown");
+    clearTimeout(demo.toastTimer);
+    demo.toastTimer = setTimeout(function () { demo.toast.classList.remove("is-shown"); }, 2200);
+  }
+
+  function onDemoClick(e) {
+    if (e.target.closest(".vn-demo-close")) { closeDemo(); return; }
+    var b = e.target.closest("[data-act]");
+    if (!b) { return; }
+    demo.taps += 1;
+    var a = demo.actions[Number(b.dataset.act)];
+    if (a.reason != null) { demo.reason = a.reason; renderDemo(demo.step); return; }
+    if (a.needsReason && demo.reason < 0) { demoToast(UI.pickReason); updateTaps(); return; }
+    if (a.toast) { demoToast(a.toast); updateTaps(); return; }
+    if (a.done) { showDemoSummary(); return; }
+    if (a.go != null) { renderDemo(a.go); }
+  }
+
+  function showDemoSummary() {
+    var secs = Math.max(1, Math.round((Date.now() - demo.start) / 1000));
+    S.demoTaps = demo.taps;
+    demo.toast.classList.remove("is-shown");
+    updateTaps();
+    demo.screen.innerHTML = '<div class="vn-demo-result"><p class="vn-demo-big">' + demo.taps + '</p><p class="vn-demo-unit">' + L(UI.tapsUnit) + "</p>" +
+      "<p>" + L({ en: "Time: " + secs + " s", ja: "かかった時間：" + secs + " 秒" }) + "</p>" +
+      '<p class="vn-demo-q">' + L(demo.def.question) + "</p>" +
+      '<button type="button" class="vn-app-primary vn-demo-close">' + L(UI.demoClose) + "</button></div>";
+    demo.screen.querySelector(".vn-demo-close").focus({ preventScroll: true });
+    S.log.push({ note: true, text: { en: demo.def.log.en + ": " + demo.taps + " taps", ja: demo.def.log.ja + "：" + demo.taps + " 回タップ" } });
+  }
+
+  function closeDemo() {
+    var node = demo.el;
+    node.classList.remove("is-open");
+    setTimeout(function () { node.remove(); }, 350);
+    S.mode = "lines";
+    box.classList.remove("is-hidden");
+    nextLine();
+  }
+
+  // ---- 後日談：ストアのレビューを読む（操作なし） ----
+  function stars(n) {
+    return '<span class="vn-stars" aria-label="' + n + ' / 5">' + "★".repeat(n) + "<i>" + "★".repeat(5 - n) + "</i></span>";
+  }
+
+  function openReviews(wrap) {
+    S.mode = "demo";
+    box.classList.add("is-hidden");
+    var rating = Number(wrap.dataset.rating) || 0;
+    var trend = wrap.dataset.trend === "up" ? UI.trendUp : wrap.dataset.trend === "down" ? UI.trendDown : null;
+    var reviews = Array.prototype.map.call(wrap.querySelectorAll(".vn-review"), function (r) {
+      return { name: r.dataset.name, stars: Number(r.dataset.stars) || 0, text: textPair(r) };
+    });
+    var cards = reviews.map(function (r, n) {
+      return '<div class="vn-review-card" style="--i:' + n + '"><div class="vn-review-top"><b>' + esc(r.name) + "</b>" + stars(r.stars) + "</div><p>" + L(r.text) + "</p></div>";
+    }).join("");
+    var node = el("div", "vn-demo vn-store",
+      '<div class="vn-demo-head"><span class="vn-demo-tag">' + L(UI.storeTag) + "</span><p>" + L(UI.storeTask) + "</p></div>" +
+      '<div class="vn-phone"><div class="vn-phone-bar"><b>App Store</b><span>9:41</span></div><div class="vn-phone-screen">' +
+      '<div class="vn-store-app"><span class="vn-store-icon">L</span><span class="vn-store-name"><b>LearnLoop</b><small>' + L(UI.storeSub) + "</small></span></div>" +
+      '<div class="vn-store-score"><strong>' + rating.toFixed(1) + "</strong>" + stars(Math.round(rating)) +
+      (trend ? '<span class="vn-store-trend ' + (wrap.dataset.trend === "up" ? "is-up" : "is-down") + '">' + L(trend) + "</span>" : "") + "</div>" +
+      '<p class="vn-store-h">' + L(UI.storeHeading) + "</p>" + cards + "</div></div>" +
+      '<button type="button" class="vn-app-primary vn-demo-close" style="--n:' + reviews.length + '">' + L(UI.storeClose) + "</button>");
+    body.appendChild(node);
+    requestAnimationFrame(function () { node.classList.add("is-open"); });
+    // レビューが1件ずつ現れるのに合わせて、画面を下までスクロールする
+    var screen = node.querySelector(".vn-phone-screen");
+    reviews.forEach(function (r, n) {
+      setTimeout(function () { screen.scrollTo({ top: screen.scrollHeight, behavior: reduceMotion ? "auto" : "smooth" }); }, n * 900 + 700);
+    });
+    reviews.forEach(function (r) {
+      S.log.push({ name: { en: r.name + " " + "★".repeat(r.stars), ja: r.name + " " + "★".repeat(r.stars) }, color: "#b7791f", text: r.text });
+    });
+    node.querySelector(".vn-demo-close").addEventListener("click", function () {
+      node.classList.remove("is-open");
+      setTimeout(function () { node.remove(); }, 350);
+      S.mode = "lines";
+      box.classList.remove("is-hidden");
+      nextLine();
+    });
+  }
+
   function finishScene() {
     if (S.choices) {
       S.mode = "choice";
       stage.classList.add("is-dim");
       box.classList.remove("is-ready");
       S.choices.classList.add("is-open");
+      S.choiceOpenedAt = Date.now();
       var first = S.choices.querySelector(".vn-choice");
       if (first) { first.focus({ preventScroll: true }); }
     } else if (S.ending) {
@@ -619,13 +942,20 @@ The Exit Is Still There
       S.ending.classList.add("is-open");
       var again = S.ending.querySelector(".vn-btn");
       if (again) { again.focus({ preventScroll: true }); }
+    } else if (S.scene.querySelector(".vn-continue tw-link")) {
+      // 後日談など、次の場面へそのまま進む
+      S.mode = "leaving";
+      box.classList.add("is-hidden");
+      var next = S.scene.querySelector(".vn-continue tw-link");
+      setTimeout(function () { next.click(); }, reduceMotion ? 0 : 300);
     } else {
       S.mode = "done";
     }
   }
 
   function choose(card) {
-    if (S.mode !== "choice") { return; }
+    // 会話を連打していたクリックが、出てきたばかりの選択肢に当たらないようにする
+    if (S.mode !== "choice" || Date.now() - S.choiceOpenedAt < 450) { return; }
     S.mode = "leaving";
     card.classList.add("is-chosen");
     var title = card.querySelector(".vn-choice-title");
@@ -644,6 +974,7 @@ The Exit Is Still There
   // ---- 会話ログ ----
   function openLog() {
     logPanel.querySelector(".vn-log-list").innerHTML = S.log.map(function (item) {
+      if (item.note) { return '<li class="is-choice">▶ ' + L(item.text) + "</li>"; }
       if (item.choice) {
         return '<li class="is-choice">▶ ' + L({ en: UI.yourChoice.en + item.text.en, ja: UI.yourChoice.ja + item.text.ja }) + "</li>";
       }
@@ -671,7 +1002,7 @@ The Exit Is Still There
       if (link && !t.closest("tw-link")) { link.click(); }
       return;
     }
-    if (t.closest("a, button, tw-link, .vn-choice, .vn-ending-card, .vn-title, .vn-log, .vn-lang")) { return; }
+    if (t.closest("a, button, tw-link, .vn-choice, .vn-ending-card, .vn-title, .vn-log, .vn-lang, .vn-demo")) { return; }
     advance();
   });
 
@@ -879,6 +1210,101 @@ html[data-lang="en"] [lang="ja"], html[data-lang="ja"] [lang="en"] { display: no
 .vn-box[data-kind="narration"] .vn-text { color: #334155; }
 .vn-box[data-kind="reflect"] { background: linear-gradient(180deg, rgba(241, 246, 255, .97), rgba(229, 238, 252, .94)); }
 .vn-box[data-kind="notice"] .vn-text { color: #334155; font-weight: 700; }
+.vn-box[data-kind="jordan"] { background: linear-gradient(180deg, rgba(248, 250, 252, .97), rgba(234, 240, 249, .95)); }
+.vn-box[data-kind="jordan"] .vn-text { color: #334155; }
+
+/* ---------- 解約画面の体験（Jordan の視点） ---------- */
+.vn-demo {
+  align-items: center; backdrop-filter: blur(4px); background: rgba(15, 23, 42, .62); box-sizing: border-box; display: flex;
+  flex-direction: column; gap: 12px; inset: 0; justify-content: center; opacity: 0; padding: 64px 16px 16px; position: fixed;
+  transition: opacity .35s ease; z-index: 5;
+}
+.vn-demo.is-open { opacity: 1; }
+.vn-demo-head { color: #fff; text-align: center; }
+.vn-demo-tag { background: #fff; border-radius: 999px; color: var(--blue); display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .14em; padding: 3px 12px; }
+.vn-demo-head p { font-size: 1.05rem; font-weight: 700; margin: 8px 0 2px; }
+.vn-demo-taps { color: #cbd5e1; font-size: .8rem; font-variant-numeric: tabular-nums; }
+.vn-phone {
+  background: #f8fafc; border: 10px solid #111827; border-radius: 34px; box-shadow: 0 30px 70px rgba(0, 0, 0, .45); box-sizing: border-box;
+  display: flex; flex-direction: column; height: min(560px, calc(100vh - 160px)); overflow: hidden; position: relative; width: min(340px, 100%);
+}
+.vn-phone-bar { align-items: center; background: var(--blue); color: #fff; display: flex; font-size: .82rem; justify-content: space-between; padding: 10px 16px; }
+.vn-phone-screen { display: flex; flex: 1; flex-direction: column; gap: 10px; overflow: auto; padding: 16px; }
+.vn-app-title { color: var(--ink); font-size: 1.1rem; margin: 0 0 2px; }
+.vn-app-list { background: #fff; border: 1px solid #e2e8f0; border-radius: 14px; list-style: none; margin: 0; overflow: hidden; padding: 0; }
+.vn-app-list li + li { border-top: 1px solid #e2e8f0; }
+.vn-app-list button {
+  align-items: center; background: none; border: 0; color: var(--ink); cursor: pointer; display: flex; font: 500 .92rem var(--font);
+  justify-content: space-between; padding: 13px 14px; text-align: left; width: 100%;
+}
+.vn-app-list button:hover, .vn-app-list button:focus-visible { background: #f1f5f9; outline: none; }
+.vn-app-list button span[lang] { color: var(--ink); }
+.vn-app-heading { color: var(--ink); font-size: 1.15rem; font-weight: 900; line-height: 1.4; margin: 6px 0 0; }
+.vn-app-text { color: var(--muted); font-size: .88rem; margin: 0; }
+.vn-app-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; color: var(--ink); font-size: .84rem; padding: 12px 14px; }
+.vn-app-reasons { display: grid; gap: 8px; }
+.vn-app-reason {
+  background: #fff; border: 1.5px solid #e2e8f0; border-radius: 12px; color: var(--ink); cursor: pointer; font: 500 .88rem var(--font);
+  padding: 10px 12px; text-align: left;
+}
+.vn-app-reason.is-on { background: #eef4ff; border-color: var(--blue); }
+.vn-app-primary {
+  background: linear-gradient(120deg, #f59e0b, #ea580c); border: 0; border-radius: 14px; box-shadow: 0 8px 18px rgba(234, 88, 12, .32);
+  color: #fff; cursor: pointer; font: 900 1rem var(--font); margin-top: auto; padding: 15px 12px;
+}
+.vn-app-primary:focus-visible, .vn-app-reason:focus-visible { outline: 3px solid #93b4ff; }
+.vn-app-link { background: none; border: 0; color: #a3adbb; cursor: pointer; font: 500 .68rem var(--font); padding: 4px; text-decoration: underline; }
+.vn-phone-toast {
+  background: rgba(15, 23, 42, .92); border-radius: 12px; color: #fff; font-size: .8rem; left: 14px; opacity: 0; padding: 9px 12px;
+  pointer-events: none; position: absolute; right: 14px; top: 52px; transform: translateY(-8px); transition: opacity .2s, transform .2s;
+}
+.vn-phone-toast.is-shown { opacity: 1; transform: none; }
+.vn-demo-result { display: flex; flex-direction: column; gap: 4px; margin: auto 0; text-align: center; }
+.vn-demo-result p { color: var(--ink); margin: 0; }
+.vn-demo-big { color: var(--blue) !important; font-size: 3.4rem; font-weight: 900; line-height: 1; }
+.vn-demo-unit { color: var(--muted) !important; }
+.vn-demo-q { font-weight: 700; line-height: 1.6; margin: 12px 0 !important; }
+/* ---------- 後日談：ストアのレビュー ---------- */
+.vn-reviews, .vn-continue { display: none !important; }
+.vn-store-app { align-items: center; display: flex; gap: 12px; }
+.vn-store-icon {
+  align-items: center; background: linear-gradient(135deg, #2f63d6, #6b93f0); border-radius: 14px; color: #fff; display: flex; flex: none;
+  font-size: 1.5rem; font-weight: 900; height: 54px; justify-content: center; width: 54px;
+}
+.vn-store-name b { color: var(--ink); display: block; font-size: 1rem; }
+.vn-store-name small { color: var(--muted); font-size: .72rem; }
+.vn-store-score { align-items: center; background: #fff; border: 1px solid #e2e8f0; border-radius: 14px; display: flex; flex-wrap: wrap; gap: 10px; padding: 10px 14px; }
+.vn-store-score strong { color: var(--ink); font-size: 2.1rem; line-height: 1; }
+.vn-stars { color: #f59e0b; font-size: .9rem; letter-spacing: .06em; white-space: nowrap; }
+.vn-stars i { color: #d5dbe4; font-style: normal; }
+.vn-store-trend { border-radius: 99px; font-size: .68rem; font-weight: 700; margin-left: auto; padding: 2px 8px; }
+.vn-store-trend.is-up { background: #dcfce7; color: #15803d; }
+.vn-store-trend.is-down { background: #fee2e2; color: #b91c1c; }
+.vn-store-h { color: var(--ink); font-size: .86rem; font-weight: 700; margin: 4px 0 0; }
+.vn-review-card {
+  animation: vn-rise .55s cubic-bezier(.2, .8, .2, 1) both; animation-delay: calc(var(--i) * .9s + .5s);
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 14px; flex: none; padding: 10px 12px;
+}
+.vn-review-top { align-items: center; display: flex; font-size: .8rem; justify-content: space-between; }
+.vn-review-top b { color: var(--ink); }
+.vn-review-card p { color: var(--ink); font-size: .84rem; line-height: 1.6; margin: 4px 0 0; }
+.vn-store .vn-phone { height: min(540px, calc(100vh - 230px)); }
+.vn-store .vn-demo-close {
+  animation: vn-rise .5s both; animation-delay: calc(var(--n) * .9s + .7s); background: linear-gradient(120deg, #2f63d6, #1e4fb5);
+  box-shadow: 0 8px 18px rgba(47, 99, 214, .35); flex: none; margin-top: 0; padding: 13px 34px;
+}
+
+/* ---------- エンディング：守れたもの／失ったもの ---------- */
+.vn-ending-ledger { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; margin-top: 14px; text-align: left; }
+.vn-ending-ledger > div { border-radius: 12px; font-size: .84rem; padding: 10px 14px; }
+.vn-ending-ledger h3 { font-size: .76rem; letter-spacing: .06em; margin: 0 0 2px; }
+.vn-ending-ledger p { line-height: 1.65 !important; margin: 0 !important; }
+.vn-kept { background: #ecfdf5; }
+.vn-kept h3 { color: #047857; }
+.vn-lost { background: #fef2f2; }
+.vn-lost h3 { color: #b91c1c; }
+
+.vn-demo-result .vn-demo-close { background: linear-gradient(120deg, #2f63d6, #1e4fb5); box-shadow: 0 8px 18px rgba(47, 99, 214, .35); }
 .vn-text { font-size: clamp(1rem, 1.55vw, 1.2rem); letter-spacing: .03em; line-height: 1.9; margin: 0; min-height: 3.8em; }
 .vn-sr { clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; position: absolute; width: 1px; }
 .vn-face {
@@ -961,6 +1387,11 @@ html[data-lang="en"] [lang="ja"], html[data-lang="ja"] [lang="en"] { display: no
 .vn-ending-card h2 { font-size: clamp(1.6rem, 3.6vw, 2.3rem); font-weight: 900; letter-spacing: .06em; margin: 6px 0 12px; }
 .vn-ending-card p { line-height: 1.85; margin: 8px 0; }
 .vn-ending-discuss { color: var(--muted); font-size: .9rem; }
+.vn-ending-code {
+  background: #eef4ff; border-left: 4px solid var(--blue); border-radius: 10px; color: var(--ink); font-size: .84rem;
+  line-height: 1.7 !important; margin: 14px 0 0 !important; padding: 10px 14px; text-align: left;
+}
+.vn-ending-code b { color: var(--blue); display: block; font-size: .76rem; letter-spacing: .02em; }
 .vn-ending-stats { background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; display: grid; gap: 8px; margin: 18px 0 12px; padding: 14px 18px; text-align: left; }
 .vn-ending-stat { align-items: center; display: grid; font-size: .84rem; gap: 12px; grid-template-columns: 7.5em 1fr 2.5em; }
 .vn-ending-stat .vn-meter-bar { background: #e9edf3; height: 8px; margin: 0; }
@@ -1054,6 +1485,9 @@ html[data-lang="en"] [lang="ja"], html[data-lang="ja"] [lang="en"] { display: no
 }
 @media (max-width: 600px) {
   .vn-title { padding-top: 64px; }
+  .vn-ending-ledger { grid-template-columns: 1fr; }
+  .vn-ending { padding-top: 64px; }
+  .vn-ending-card { max-height: calc(100vh - 80px); }
   :root { --box-h: 150px; }
   .vn-hud { flex-direction: column; left: 16px; right: 16px; }
   .vn-hud-right { width: 100%; }
