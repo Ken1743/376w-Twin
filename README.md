@@ -38,10 +38,3 @@ python3 tools/build.py
 
 The script replaces only the story data in `game.html` and keeps the Harlowe engine, so Tweego is not required.
 
-## Submission package
-
-From the parent folder, zip the project without the git history and macOS metadata:
-
-```sh
-zip -r 376w-Twin.zip 376w-Twin -x "*/.git/*" "*.DS_Store" "*/docs/*"
-```
